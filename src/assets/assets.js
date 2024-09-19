@@ -1,0 +1,311 @@
+import tshirt1 from './men/men_tshirts/tshirt1/tshirt1.png'
+import tshirt1_1 from './men/men_tshirts/tshirt1/tshirt1_1.png'
+import tshirt1_2 from './men/men_tshirts/tshirt1/tshirt1_2.png'
+import tshirt1_3 from './men/men_tshirts/tshirt1/tshirt1_3.png'
+import tshirt1_4 from './men/men_tshirts/tshirt1/tshirt1_4.png'
+
+import tshirt2 from './men/men_tshirts/tshirt2/tshirt2.png'
+import tshirt2_1 from './men/men_tshirts/tshirt2/tshirt2_1.png'
+import tshirt2_2 from './men/men_tshirts/tshirt2/tshirt2_2.png'
+import tshirt2_3 from './men/men_tshirts/tshirt2/tshirt2_3.png'
+import tshirt2_4 from './men/men_tshirts/tshirt2/tshirt2_4.png'
+
+import tshirt3 from './men/men_tshirts/tshirt3/tshirt3.png'
+import tshirt3_1 from './men/men_tshirts/tshirt3/tshirt3_1.png'
+import tshirt3_2 from './men/men_tshirts/tshirt3/tshirt3_2.png'
+import tshirt3_3 from './men/men_tshirts/tshirt3/tshirt3_3.png'
+import tshirt3_4 from './men/men_tshirts/tshirt3/tshirt3_4.png'
+
+import tshirt4 from './men/men_tshirts/tshirt4/tshirt4.png'
+import tshirt4_1 from './men/men_tshirts/tshirt4/tshirt4_1.png'
+import tshirt4_2 from './men/men_tshirts/tshirt4/tshirt4_2.png'
+import tshirt4_3 from './men/men_tshirts/tshirt4/tshirt4_3.png'
+
+import tshirt5 from './men/men_tshirts/tshirt5/tshirt5.png'
+import tshirt5_1 from './men/men_tshirts/tshirt5/tshirt5_1.png'
+import tshirt5_2 from './men/men_tshirts/tshirt5/tshirt5_2.png'
+import tshirt5_3 from './men/men_tshirts/tshirt5/tshirt5_3.png'
+import tshirt5_4 from './men/men_tshirts/tshirt5/tshirt5_4.png'
+
+import tshirt6 from './men/men_tshirts/tshirt6/tshirt6.png'
+import tshirt6_1 from './men/men_tshirts/tshirt6/tshirt6_1.png'
+import tshirt6_2 from './men/men_tshirts/tshirt6/tshirt6_2.png'
+import tshirt6_3 from './men/men_tshirts/tshirt6/tshirt6_3.png'
+import tshirt6_4 from './men/men_tshirts/tshirt6/tshirt6_4.png'
+
+import pants1 from './men/men_pants/pants1/pants1.png'
+import pants1_1 from './men/men_pants/pants1/pants1_1.png'
+import pants1_2 from './men/men_pants/pants1/pants1_2.png'
+import pants1_3 from './men/men_pants/pants1/pants1_3.png'
+
+import pants2 from './men/men_pants/pants2/pants2.png'
+import pants2_1 from './men/men_pants/pants2/pants2_1.png'
+import pants2_2 from './men/men_pants/pants2/pants2_2.png'
+import pants2_3 from './men/men_pants/pants2/pants2_3.png'
+
+import pants3 from './men/men_pants/pants3/pants3.png'
+import pants3_1 from './men/men_pants/pants3/pants3_1.png'
+import pants3_2 from './men/men_pants/pants3/pants3_2.png'
+import pants3_3 from './men/men_pants/pants3/pants3_3.png'
+import pants3_4 from './men/men_pants/pants3/pants3_4.png'
+
+import pants4 from './men/men_pants/pants4/pants4.png'
+import pants4_1 from './men/men_pants/pants4/pants4_1.png'
+import pants4_2 from './men/men_pants/pants4/pants4_2.png'
+import pants4_3 from './men/men_pants/pants4/pants4_3.png'
+import pants4_4 from './men/men_pants/pants4/pants4_4.png'
+
+import pants5 from './men/men_pants/pants5/pants5.png'
+import pants5_1 from './men/men_pants/pants5/pants5_1.png'
+import pants5_2 from './men/men_pants/pants5/pants5_2.png'
+import pants5_3 from './men/men_pants/pants5/pants5_3.png'
+import pants5_4 from './men/men_pants/pants5/pants5_4.png'
+
+import sweater1 from './men/men_sweaters/sweater1/sweater1.png'
+import sweater1_1 from './men/men_sweaters/sweater1/sweater1_1.png'
+import sweater1_2 from './men/men_sweaters/sweater1/sweater1_2.png'
+import sweater1_3 from './men/men_sweaters/sweater1/sweater1_3.png'
+import sweater1_4 from './men/men_sweaters/sweater1/sweater1_4.png'
+
+import sweater2 from './men/men_sweaters/sweater2/sweater2.png'
+import sweater2_1 from './men/men_sweaters/sweater2/sweater2_1.png'
+import sweater2_2 from './men/men_sweaters/sweater2/sweater2_2.png'
+import sweater2_3 from './men/men_sweaters/sweater2/sweater2_3.png'
+import sweater2_4 from './men/men_sweaters/sweater2/sweater2_4.png'
+
+import sweater3 from './men/men_sweaters/sweater3/sweater3.png'
+import sweater3_1 from './men/men_sweaters/sweater3/sweater3_1.png'
+import sweater3_2 from './men/men_sweaters/sweater3/sweater3_2.png'
+import sweater3_3 from './men/men_sweaters/sweater3/sweater3_3.png'
+import sweater3_4 from './men/men_sweaters/sweater3/sweater3_4.png'
+
+import sweater4 from './men/men_sweaters/sweater4/sweater4.png'
+import sweater4_1 from './men/men_sweaters/sweater4/sweater4_1.png'
+import sweater4_2 from './men/men_sweaters/sweater4/sweater4_2.png'
+import sweater4_3 from './men/men_sweaters/sweater4/sweater4_3.png'
+import sweater4_4 from './men/men_sweaters/sweater4/sweater4_4.png'
+
+import trendify from './svg/trendify.svg'
+import trash from './svg/trash.svg'
+import search from './svg/search.svg'
+import profile from './svg/profile.svg'
+import cart from './svg/cart.svg'
+import menu from './svg/menu.svg'
+import dropdown from './svg/dropdown.svg'
+import coin from './svg/coin.svg'
+import trophy from './svg/trophy.svg'
+import question from './svg/question.svg'
+import twitter from './svg/twitter-x.svg'
+import facebook from './svg/facebook.svg'
+import instagram from './svg/instagram.svg'
+
+import hero from './svg/hero.png'
+
+export const assets = {
+    instagram,
+    facebook,
+    twitter,
+    question,
+    trophy,
+    coin,
+    hero,
+    dropdown,
+    menu,
+    cart,
+    profile,
+    search,
+    trash,
+    trendify,
+    tshirt1,
+    tshirt1_1,
+    tshirt1_2,
+    tshirt1_3,
+    tshirt1_4
+}
+
+export const products = [
+    {
+        _id: "t000001",
+        name: "Чоловіча футболка",
+        description: "Різнокольорова, бавовняна, вишитий логотип ззаду, круглий виріз, короткі рукава, прямий поділ, 100% бавовна, футболка з графічним принтом",
+        price: 24000,
+        image: [tshirt1, tshirt1_1, tshirt1_2, tshirt1_3, tshirt1_4],
+        category: "Men",
+        subCategory: "T-Shirt",
+        sizes: ["S", "M", "L", "XL"],
+        date: 111111111,
+        bestseller: false
+    },
+
+    {
+        _id: "t000002",
+        name: "Чоловіча футболка",
+        description: "пвр",
+        price: 15700,
+        image: [tshirt2, tshirt2_1, tshirt2_2, tshirt2_3, tshirt2_4],
+        category: "Men",
+        subCategory: "T-Shirt",
+        sizes: ["S", "M"],
+        date: 222222222,
+        bestseller: false
+    },
+
+    {
+        _id: "t000003",
+        name: "Чоловіча футболка",
+        description: "цуйц",
+        price: 11000,
+        image: [tshirt3, tshirt3_1, tshirt3_2, tshirt3_3, tshirt3_4],
+        category: "Men",
+        subCategory: "T-Shirt",
+        sizes: ["S", "L", "XL"],
+        date: 333333333,
+        bestseller: false
+    },
+    {
+        _id: "t000004",
+        name: "Чоловіча футболка",
+        description: "іві",
+        price: 9000,
+        image: [tshirt4, tshirt4_1, tshirt4_2, tshirt4_3],
+        category: "Men",
+        subCategory: "T-Shirt",
+        sizes: ["L", "XL"],
+        date: 444444444,
+        bestseller: true
+    },
+    {
+        _id: "t000005",
+        name: "Чоловіча футболка",
+        description: "фів",
+        price: 100000,
+        image: [tshirt5, tshirt5_1, tshirt5_2, tshirt5_3, tshirt5_4],
+        category: "Men",
+        subCategory: "T-Shirt",
+        sizes: ["S", "XL"],
+        date: 555555555,
+        bestseller: false
+    },
+    {
+        _id: "t000006",
+        name: "Чоловіча футболка",
+        description: "фів",
+        price: 54000,
+        image: [tshirt6, tshirt6_1, tshirt6_2, tshirt6_3, tshirt6_4],
+        category: "Men",
+        subCategory: "T-Shirt",
+        sizes: ["M", "L"],
+        date: 666666666,
+        bestseller: false
+    },
+    {
+        _id: "p000001",
+        name: "Чоловічі штани",
+        description: "фів",
+        price: 25000,
+        image: [pants1, pants1_1, pants1_2, pants1_3],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 12423412,
+        bestseller: false
+    },
+    {
+        _id: "p000002",
+        name: "Чоловічі штани",
+        description: "фів",
+        price: 49000,
+        image: [pants2, pants2_1, pants2_2, pants2_3],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 11212312,
+        bestseller: false
+    },
+    {
+        _id: "p000003",
+        name: "Чоловічі штани",
+        description: "фів",
+        price: 91000,
+        image: [pants3, pants3_1, pants3_2, pants3_3, pants3_4],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 123152412,
+        bestseller: true
+    },
+    {
+        _id: "p000004",
+        name: "Чоловічі штани",
+        description: "фів",
+        price: 61000,
+        image: [pants4, pants4_1, pants4_2, pants4_3, pants4_4],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["L", "XL"],
+        date: 11232412,
+        bestseller: true
+    },
+    {
+        _id: "p000005",
+        name: "Чоловічі штани",
+        description: "фпіфв",
+        price: 10000,
+        image: [pants5, pants5_1, pants5_2, pants5_3, pants5_4],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["S", "M"],
+        date: 11232412,
+        bestseller: false
+    },
+
+    {
+        _id: "s000001",
+        name: "Чоловічий светр",
+        description: "фпфівф",
+        price: 140000,
+        image: [sweater1, sweater1_1, sweater1_2,  sweater1_3, sweater1_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["S", "M"],
+        date: 11233412,
+        bestseller: true
+    },
+
+    {
+        _id: "s000002",
+        name: "Чоловічий светр",
+        description: "фпфівф",
+        price: 140000,
+        image: [sweater2, sweater2_1, sweater2_2,  sweater2_3, sweater2_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["L", "XL"],
+        date: 11233412,
+        bestseller: true
+    },
+    {
+        _id: "s000003",
+        name: "Чоловічий светр",
+        description: "фпфівф",
+        price: 11200,
+        image: [sweater3, sweater3_1, sweater3_2,  sweater3_3, sweater3_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["S", "XL"],
+        date: 131412,
+        bestseller: true
+    },
+    {
+        _id: "s000004",
+        name: "Чоловічий светр",
+        description: "фпфівф",
+        price: 71000,
+        image: [sweater4, sweater4_1, sweater4_2,  sweater4_3, sweater4_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["S", "XL"],
+        date: 131412,
+        bestseller: false
+    }
+]
