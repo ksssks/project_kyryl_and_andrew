@@ -1,3 +1,4 @@
+{/*Men clothes*/}
 import tshirt1 from './men/men_tshirts/tshirt1/tshirt1.png'
 import tshirt1_1 from './men/men_tshirts/tshirt1/tshirt1_1.png'
 import tshirt1_2 from './men/men_tshirts/tshirt1/tshirt1_2.png'
@@ -100,6 +101,89 @@ import facebook from './svg/facebook.svg'
 import instagram from './svg/instagram.svg'
 
 import hero from './svg/hero.png'
+{/*Women clothes*/}
+import w_tshirt1 from './women/women_tshirts/tshirt1/tshirt1.png'
+import w_tshirt1_1 from './women/women_tshirts/tshirt1/tshirt1_1.png'
+import w_tshirt1_2 from './women/women_tshirts/tshirt1/tshirt1_2.png'
+import w_tshirt1_3 from './women/women_tshirts/tshirt1/tshirt1_3.png'
+import w_tshirt1_4 from './women/women_tshirts/tshirt1/tshirt1_4.png'
+
+import w_tshirt2 from './women/women_tshirts/tshirt2/tshirt2.png'
+import w_tshirt2_1 from './women/women_tshirts/tshirt2/tshirt2_1.png'
+import w_tshirt2_2 from './women/women_tshirts/tshirt2/tshirt2_2.png'
+import w_tshirt2_3 from './women/women_tshirts/tshirt2/tshirt2_3.png'
+
+import w_tshirt3 from './women/women_tshirts/tshirt3/tshirt3.png'
+import w_tshirt3_1 from './women/women_tshirts/tshirt3/tshirt3_1.png'
+import w_tshirt3_2 from './women/women_tshirts/tshirt3/tshirt3_2.png'
+import w_tshirt3_3 from './women/women_tshirts/tshirt3/tshirt3_3.png'
+import w_tshirt3_4 from './women/women_tshirts/tshirt3/tshirt3_4.png'
+
+import w_tshirt4 from './women/women_tshirts/tshirt4/tshirt4.png'
+import w_tshirt4_1 from './women/women_tshirts/tshirt4/tshirt4_1.png'
+import w_tshirt4_2 from './women/women_tshirts/tshirt4/tshirt4_2.png'
+import w_tshirt4_3 from './women/women_tshirts/tshirt4/tshirt4_3.png'
+import w_tshirt4_4 from './women/women_tshirts/tshirt4/tshirt4_3.png'
+
+
+import w_pants1 from './women/women_pants/pants1/pants1.png'
+import w_pants1_1 from './women/women_pants/pants1/pants1_1.png'
+import w_pants1_2 from './women/women_pants/pants1/pants1_2.png'
+import w_pants1_3 from './women/women_pants/pants1/pants1_3.png'
+import w_pants1_4 from './women/women_pants/pants1/pants1_4.png'
+
+import w_pants2 from './women/women_pants/pants2/pants2.png'
+import w_pants2_1 from './women/women_pants/pants2/pants2_1.png'
+import w_pants2_2 from './women/women_pants/pants2/pants2_2.png'
+import w_pants2_3 from './women/women_pants/pants2/pants2_3.png'
+import w_pants2_4 from './women/women_pants/pants2/pants2_4.png'
+
+import w_pants3 from './women/women_pants/pants3/pants3.png'
+import w_pants3_1 from './women/women_pants/pants3/pants3_1.png'
+import w_pants3_2 from './women/women_pants/pants3/pants3_2.png'
+import w_pants3_3 from './women/women_pants/pants3/pants3_3.png'
+import w_pants3_4 from './women/women_pants/pants3/pants3_4.png'
+
+import w_pants4 from './women/women_pants/pants4/pants4.png'
+import w_pants4_1 from './women/women_pants/pants4/pants4_1.png'
+import w_pants4_2 from './women/women_pants/pants4/pants4_2.png'
+import w_pants4_3 from './women/women_pants/pants4/pants4_3.png'
+import w_pants4_4 from './women/women_pants/pants4/pants4_4.png'
+
+
+import w_sweater1 from './women/women_sweaters/sweater1/sweater1.png'
+import w_sweater1_1 from './women/women_sweaters/sweater1/sweater1_1.png'
+import w_sweater1_2 from './women/women_sweaters/sweater1/sweater1_2.png'
+import w_sweater1_3 from './women/women_sweaters/sweater1/sweater1_3.png'
+import w_sweater1_4 from './women/women_sweaters/sweater1/sweater1_4.png'
+
+import w_sweater2 from './women/women_sweaters/sweater2/sweater2.png'
+import w_sweater2_1 from './women/women_sweaters/sweater2/sweater2_1.png'
+import w_sweater2_2 from './women/women_sweaters/sweater2/sweater2_2.png'
+import w_sweater2_3 from './women/women_sweaters/sweater2/sweater2_3.png'
+
+import w_sweater3 from './women/women_sweaters/sweater3/sweater3.png'
+import w_sweater3_1 from './women/women_sweaters/sweater3/sweater3_1.png'
+import w_sweater3_2 from './women/women_sweaters/sweater3/sweater3_2.png'
+import w_sweater3_3 from './women/women_sweaters/sweater3/sweater3_3.png'
+import w_sweater3_4 from './women/women_sweaters/sweater3/sweater3_4.png'
+
+import w_sweater4 from './women/women_sweaters/sweater4/sweater4.png'
+import w_sweater4_1 from './women/women_sweaters/sweater4/sweater4_1.png'
+import w_sweater4_2 from './women/women_sweaters/sweater4/sweater4_2.png'
+import w_sweater4_3 from './women/women_sweaters/sweater4/sweater4_3.png'
+
+{/*Kids clothes*/}
+
+import k_pants1 from './kids/kids_pants/pants1/pants1.png'
+import k_pants1_1 from './kids/kids_pants/pants1/pants1_1.png'
+import k_pants1_2 from './kids/kids_pants/pants1/pants1_2.png'
+import k_pants1_3 from './kids/kids_pants/pants1/pants1_3.png'
+
+import k_pants2 from './kids/kids_pants/pants2/pants2.png'
+import k_pants2_1 from './kids/kids_pants/pants2/pants2_1.png'
+import k_pants2_2 from './kids/kids_pants/pants2/pants2_2.png'
+import k_pants2_3 from './kids/kids_pants/pants2/pants2_3.png'
 
 export const assets = {
     instagram,
@@ -124,6 +208,7 @@ export const assets = {
 }
 
 export const products = [
+    /* Men clothes*/
     {
         _id: "t000001",
         name: "Чоловіча футболка",
@@ -136,7 +221,6 @@ export const products = [
         date: 111111111,
         bestseller: false
     },
-
     {
         _id: "t000002",
         name: "Чоловіча футболка",
@@ -149,7 +233,6 @@ export const products = [
         date: 222222222,
         bestseller: false
     },
-
     {
         _id: "t000003",
         name: "Чоловіча футболка",
@@ -258,7 +341,6 @@ export const products = [
         date: 11232412,
         bestseller: false
     },
-
     {
         _id: "s000001",
         name: "Чоловічий светр",
@@ -271,7 +353,6 @@ export const products = [
         date: 11233412,
         bestseller: true
     },
-
     {
         _id: "s000002",
         name: "Чоловічий светр",
@@ -307,5 +388,183 @@ export const products = [
         sizes: ["S", "XL"],
         date: 131412,
         bestseller: false
+    },
+
+    /* Women clothes*/
+    {
+        _id: "tw000001",
+        name: "Жіноча футболка",
+        description: "Різнокольорова, бавовняна, вишитий логотип ззаду, круглий виріз, короткі рукава, прямий поділ, 100% бавовна, футболка з графічним принтом",
+        price: 66000,
+        image: [w_tshirt1, w_tshirt1_1, w_tshirt1_2, w_tshirt1_3, w_tshirt1_4],
+        category: "Women",
+        subCategory: "T-Shirt",
+        sizes: ["S", "M", "L", "XL"],
+        date: 12343211,
+        bestseller: false
+    },
+
+    {
+        _id: "tw000002",
+        name: "Жіноча футболка",
+        description: "пвр",
+        price: 55400,
+        image: [w_tshirt2, w_tshirt2_1, w_tshirt2_2, w_tshirt2_3],
+        category: "Women",
+        subCategory: "T-Shirt",
+        sizes: ["S", "M"],
+        date: 223423422,
+        bestseller: false
+    },
+
+    {
+        _id: "tw000003",
+        name: "Жіноча футболка",
+        description: "цуйц",
+        price: 19000,
+        image: [w_tshirt3, w_tshirt3_1, w_tshirt3_2, w_tshirt3_3, w_tshirt3_4],
+        category: "Women",
+        subCategory: "T-Shirt",
+        sizes: ["S", "L", "XL"],
+        date: 323423433,
+        bestseller: false
+    },
+    {
+        _id: "tw000004",
+        name: "Жіноча футболка",
+        description: "іві",
+        price: 55100,
+        image: [w_tshirt4, w_tshirt4_1, w_tshirt4_2, w_tshirt4_3, w_tshirt4_4],
+        category: "Women",
+        subCategory: "T-Shirt",
+        sizes: ["L", "XL"],
+        date: 4434544,
+        bestseller: true
+    },
+
+    {
+        _id: "pw000001",
+        name: "Жіночі штани",
+        description: "фів",
+        price: 15000,
+        image: [w_pants1, w_pants1_1, w_pants1_2, w_pants1_3, w_pants1_4],
+        category: "Women",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1242342342,
+        bestseller: false
+    },
+    {
+        _id: "pw000002",
+        name: "Жіночі штани",
+        description: "фів",
+        price: 33000,
+        image: [w_pants2, w_pants2_1, w_pants2_2, w_pants2_3, w_pants2_4],
+        category: "Women",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 856312,
+        bestseller: false
+    },
+    {
+        _id: "pw000003",
+        name: "Жіночі штани",
+        description: "фів",
+        price: 67000,
+        image: [w_pants3, w_pants3_1, w_pants3_2, w_pants3_3, w_pants3_4],
+        category: "Women",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 12315234532,
+        bestseller: true
+    },
+    {
+        _id: "pw000004",
+        name: "Жіночі штани",
+        description: "фів",
+        price: 78000,
+        image: [w_pants4, w_pants4_1, w_pants4_2, w_pants4_3, w_pants4_4],
+        category: "Women",
+        subCategory: "Pants",
+        sizes: ["L", "XL"],
+        date: 1112341232,
+        bestseller: true
+    },
+
+    {
+        _id: "sw000001",
+        name: "Жіночий светр",
+        description: "фпфівф",
+        price: 19000,
+        image: [w_sweater1, w_sweater1_1, w_sweater1_2,  w_sweater1_3, w_sweater1_4],
+        category: "Women",
+        subCategory: "Sweaters",
+        sizes: ["S", "M"],
+        date: 1121235235,
+        bestseller: true
+    },
+
+    {
+        _id: "sw000002",
+        name: "Жіночий светр",
+        description: "фпфівф",
+        price: 56000,
+        image: [w_sweater2, w_sweater2_1, w_sweater2_2,  w_sweater2_3],
+        category: "Women",
+        subCategory: "Sweaters",
+        sizes: ["L", "XL"],
+        date: 11657412,
+        bestseller: true
+    },
+    {
+        _id: "sw000003",
+        name: "Жіночий светр",
+        description: "фпфівф",
+        price: 71200,
+        image: [w_sweater3, w_sweater3_1, w_sweater3_2,  w_sweater3_3, w_sweater3_4],
+        category: "Women",
+        subCategory: "Sweaters",
+        sizes: ["S", "XL"],
+        date: 15647462,
+        bestseller: true
+    },
+    {
+        _id: "sw000004",
+        name: "Жіночий светр",
+        description: "фпфівф",
+        price: 11000,
+        image: [w_sweater4, w_sweater4_1, w_sweater4_2,  w_sweater4_3],
+        category: "Women",
+        subCategory: "Sweaters",
+        sizes: ["S", "XL"],
+        date: 157412,
+        bestseller: false
+    },
+
+    {
+        _id: "pk000001",
+        name: "Дитячі штани",
+        description: "фів",
+        price: 67000,
+        image: [k_pants1, k_pants1_1, k_pants1_2, k_pants1_3],
+        category: "Kids",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 12315234532,
+        bestseller: true
+    },
+    {
+        _id: "pk000002",
+        name: "Дитячі штани",
+        description: "фів",
+        price: 78000,
+        image: [k_pants2, k_pants2_1, k_pants2_2, k_pants2_3],
+        category: "Kids",
+        subCategory: "Pants",
+        sizes: ["L", "XL"],
+        date: 1112341232,
+        bestseller: true
     }
+
+
 ]
