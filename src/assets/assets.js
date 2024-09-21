@@ -228,7 +228,7 @@ export const products = [
         price: 15700,
         image: [tshirt2, tshirt2_1, tshirt2_2, tshirt2_3, tshirt2_4],
         category: "Men",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "M"],
         date: 222222222,
         bestseller: false
@@ -240,7 +240,7 @@ export const products = [
         price: 11000,
         image: [tshirt3, tshirt3_1, tshirt3_2, tshirt3_3, tshirt3_4],
         category: "Men",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "L", "XL"],
         date: 333333333,
         bestseller: false
@@ -252,7 +252,7 @@ export const products = [
         price: 9000,
         image: [tshirt4, tshirt4_1, tshirt4_2, tshirt4_3],
         category: "Men",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["L", "XL"],
         date: 444444444,
         bestseller: true
@@ -264,7 +264,7 @@ export const products = [
         price: 100000,
         image: [tshirt5, tshirt5_1, tshirt5_2, tshirt5_3, tshirt5_4],
         category: "Men",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "XL"],
         date: 555555555,
         bestseller: false
@@ -276,7 +276,7 @@ export const products = [
         price: 54000,
         image: [tshirt6, tshirt6_1, tshirt6_2, tshirt6_3, tshirt6_4],
         category: "Men",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["M", "L"],
         date: 666666666,
         bestseller: false
@@ -398,7 +398,7 @@ export const products = [
         price: 66000,
         image: [w_tshirt1, w_tshirt1_1, w_tshirt1_2, w_tshirt1_3, w_tshirt1_4],
         category: "Women",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "M", "L", "XL"],
         date: 12343211,
         bestseller: false
@@ -411,7 +411,7 @@ export const products = [
         price: 55400,
         image: [w_tshirt2, w_tshirt2_1, w_tshirt2_2, w_tshirt2_3],
         category: "Women",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "M"],
         date: 223423422,
         bestseller: false
@@ -424,7 +424,7 @@ export const products = [
         price: 19000,
         image: [w_tshirt3, w_tshirt3_1, w_tshirt3_2, w_tshirt3_3, w_tshirt3_4],
         category: "Women",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "L", "XL"],
         date: 323423433,
         bestseller: false
@@ -436,7 +436,7 @@ export const products = [
         price: 55100,
         image: [w_tshirt4, w_tshirt4_1, w_tshirt4_2, w_tshirt4_3, w_tshirt4_4],
         category: "Women",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["L", "XL"],
         date: 4434544,
         bestseller: true
