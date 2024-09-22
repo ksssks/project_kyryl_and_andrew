@@ -99,8 +99,9 @@ import question from './svg/question.svg'
 import twitter from './svg/twitter-x.svg'
 import facebook from './svg/facebook.svg'
 import instagram from './svg/instagram.svg'
-
 import hero from './svg/hero.png'
+import cross from './svg/cross.svg'
+
 {/*Women clothes*/}
 import w_tshirt1 from './women/women_tshirts/tshirt1/tshirt1.png'
 import w_tshirt1_1 from './women/women_tshirts/tshirt1/tshirt1_1.png'
@@ -186,6 +187,7 @@ import k_pants2_2 from './kids/kids_pants/pants2/pants2_2.png'
 import k_pants2_3 from './kids/kids_pants/pants2/pants2_3.png'
 
 export const assets = {
+    cross,
     instagram,
     facebook,
     twitter,
