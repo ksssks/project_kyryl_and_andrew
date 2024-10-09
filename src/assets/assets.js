@@ -34,6 +34,18 @@ import tshirt6_2 from './men/men_tshirts/tshirt6/tshirt6_2.png'
 import tshirt6_3 from './men/men_tshirts/tshirt6/tshirt6_3.png'
 import tshirt6_4 from './men/men_tshirts/tshirt6/tshirt6_4.png'
 
+import tshirt7 from './men/men_tshirts/tshirt7/tshirt7.png'
+import tshirt7_1 from './men/men_tshirts/tshirt7/tshirt7_1.png'
+import tshirt7_2 from './men/men_tshirts/tshirt7/tshirt7_2.png'
+import tshirt7_3 from './men/men_tshirts/tshirt7/tshirt7_3.png'
+import tshirt7_4 from './men/men_tshirts/tshirt7/tshirt7_4.png'
+
+import tshirt8 from './men/men_tshirts/tshirt8/tshirt8.png'
+import tshirt8_1 from './men/men_tshirts/tshirt8/tshirt8_1.png'
+import tshirt8_2 from './men/men_tshirts/tshirt8/tshirt8_2.png'
+import tshirt8_3 from './men/men_tshirts/tshirt8/tshirt8_3.png'
+import tshirt8_4 from './men/men_tshirts/tshirt8/tshirt8_4.png'
+
 import pants1 from './men/men_pants/pants1/pants1.png'
 import pants1_1 from './men/men_pants/pants1/pants1_1.png'
 import pants1_2 from './men/men_pants/pants1/pants1_2.png'
@@ -101,6 +113,7 @@ import facebook from './svg/facebook.svg'
 import instagram from './svg/instagram.svg'
 import hero from './svg/hero.png'
 import cross from './svg/cross.svg'
+import star_fill from './svg/star-fill.svg'
 
 {/*Women clothes*/}
 import w_tshirt1 from './women/women_tshirts/tshirt1/tshirt1.png'
@@ -206,7 +219,8 @@ export const assets = {
     tshirt1_1,
     tshirt1_2,
     tshirt1_3,
-    tshirt1_4
+    tshirt1_4,
+    star_fill
 }
 
 export const products = [
@@ -218,7 +232,7 @@ export const products = [
         price: 24000,
         image: [tshirt1, tshirt1_1, tshirt1_2, tshirt1_3, tshirt1_4],
         category: "Men",
-        subCategory: "T-Shirt",
+        subCategory: "T-Shirts",
         sizes: ["S", "M", "L", "XL"],
         date: 111111111,
         bestseller: false
@@ -226,7 +240,7 @@ export const products = [
     {
         _id: "t000002",
         name: "Чоловіча футболка",
-        description: "пвр",
+        description: "Футболка с принтом 'Криптан'",
         price: 15700,
         image: [tshirt2, tshirt2_1, tshirt2_2, tshirt2_3, tshirt2_4],
         category: "Men",
@@ -238,7 +252,7 @@ export const products = [
     {
         _id: "t000003",
         name: "Чоловіча футболка",
-        description: "цуйц",
+        description: "Футболка с принтом 'La Medaille'",
         price: 11000,
         image: [tshirt3, tshirt3_1, tshirt3_2, tshirt3_3, tshirt3_4],
         category: "Men",
@@ -250,7 +264,7 @@ export const products = [
     {
         _id: "t000004",
         name: "Чоловіча футболка",
-        description: "іві",
+        description: "Футболка з графічним принтом 'Око'",
         price: 9000,
         image: [tshirt4, tshirt4_1, tshirt4_2, tshirt4_3],
         category: "Men",
@@ -262,7 +276,7 @@ export const products = [
     {
         _id: "t000005",
         name: "Чоловіча футболка",
-        description: "фів",
+        description: "футболка з фотопринтом 'Все вирішено мама'",
         price: 100000,
         image: [tshirt5, tshirt5_1, tshirt5_2, tshirt5_3, tshirt5_4],
         category: "Men",
@@ -274,7 +288,7 @@ export const products = [
     {
         _id: "t000006",
         name: "Чоловіча футболка",
-        description: "фів",
+        description: "Футболка з принтом 'Розкіш'",
         price: 54000,
         image: [tshirt6, tshirt6_1, tshirt6_2, tshirt6_3, tshirt6_4],
         category: "Men",
@@ -284,9 +298,33 @@ export const products = [
         bestseller: false
     },
     {
+        _id: "t000007",
+        name: "Чоловіча футболка",
+        description: "Футболка з принтом 'Кохання'",
+        price: 15100,
+        image: [tshirt7, tshirt7_1, tshirt7_2, tshirt7_3, tshirt7_4],
+        category: "Men",
+        subCategory: "T-Shirts",
+        sizes: ["S","M", "XL"],
+        date: 777777777,
+        bestseller: false
+    },
+    {
+        _id: "t000008",
+        name: "Чоловіча футболка",
+        description: "Футболка з принтом 'Географія'",
+        price: 77770,
+        image: [tshirt8, tshirt8_1, tshirt8_2, tshirt8_3, tshirt8_4],
+        category: "Men",
+        subCategory: "T-Shirts",
+        sizes: ["XL"],
+        date: 888888888,
+        bestseller: false
+    },
+    {
         _id: "p000001",
         name: "Чоловічі штани",
-        description: "фів",
+        description: "Брюки карго з лозкутів",
         price: 25000,
         image: [pants1, pants1_1, pants1_2, pants1_3],
         category: "Men",
@@ -298,7 +336,7 @@ export const products = [
     {
         _id: "p000002",
         name: "Чоловічі штани",
-        description: "фів",
+        description: "Брюки 'Леопард'",
         price: 49000,
         image: [pants2, pants2_1, pants2_2, pants2_3],
         category: "Men",
@@ -310,7 +348,7 @@ export const products = [
     {
         _id: "p000003",
         name: "Чоловічі штани",
-        description: "фів",
+        description: "Штани 'Зебра'",
         price: 91000,
         image: [pants3, pants3_1, pants3_2, pants3_3, pants3_4],
         category: "Men",
@@ -322,7 +360,7 @@ export const products = [
     {
         _id: "p000004",
         name: "Чоловічі штани",
-        description: "фів",
+        description: "Брюки 'Китайський Новий Рік'",
         price: 61000,
         image: [pants4, pants4_1, pants4_2, pants4_3, pants4_4],
         category: "Men",
@@ -334,7 +372,7 @@ export const products = [
     {
         _id: "p000005",
         name: "Чоловічі штани",
-        description: "фпіфв",
+        description: "Штани джинсо-брезентові.",
         price: 10000,
         image: [pants5, pants5_1, pants5_2, pants5_3, pants5_4],
         category: "Men",
@@ -346,7 +384,7 @@ export const products = [
     {
         _id: "s000001",
         name: "Чоловічий светр",
-        description: "фпфівф",
+        description: "Светр 'Морячок'",
         price: 140000,
         image: [sweater1, sweater1_1, sweater1_2,  sweater1_3, sweater1_4],
         category: "Men",
@@ -358,7 +396,7 @@ export const products = [
     {
         _id: "s000002",
         name: "Чоловічий светр",
-        description: "фпфівф",
+        description: "Светр 'Рушничок'",
         price: 140000,
         image: [sweater2, sweater2_1, sweater2_2,  sweater2_3, sweater2_4],
         category: "Men",
@@ -370,7 +408,7 @@ export const products = [
     {
         _id: "s000003",
         name: "Чоловічий светр",
-        description: "фпфівф",
+        description: "Шерстяний светр 'Килимок'",
         price: 11200,
         image: [sweater3, sweater3_1, sweater3_2,  sweater3_3, sweater3_4],
         category: "Men",
@@ -382,7 +420,7 @@ export const products = [
     {
         _id: "s000004",
         name: "Чоловічий светр",
-        description: "фпфівф",
+        description: "Чоловічий светр 'Барбі' подовжений",
         price: 71000,
         image: [sweater4, sweater4_1, sweater4_2,  sweater4_3, sweater4_4],
         category: "Men",
@@ -409,7 +447,7 @@ export const products = [
     {
         _id: "tw000002",
         name: "Жіноча футболка",
-        description: "пвр",
+        description: "Жовта футболка 'Крутишка'",
         price: 55400,
         image: [w_tshirt2, w_tshirt2_1, w_tshirt2_2, w_tshirt2_3],
         category: "Women",
@@ -422,7 +460,7 @@ export const products = [
     {
         _id: "tw000003",
         name: "Жіноча футболка",
-        description: "цуйц",
+        description: "Футболка з абстрактним принтом",
         price: 19000,
         image: [w_tshirt3, w_tshirt3_1, w_tshirt3_2, w_tshirt3_3, w_tshirt3_4],
         category: "Women",
@@ -434,7 +472,7 @@ export const products = [
     {
         _id: "tw000004",
         name: "Жіноча футболка",
-        description: "іві",
+        description: "Футболка 'Леопард'",
         price: 55100,
         image: [w_tshirt4, w_tshirt4_1, w_tshirt4_2, w_tshirt4_3, w_tshirt4_4],
         category: "Women",
@@ -447,7 +485,7 @@ export const products = [
     {
         _id: "pw000001",
         name: "Жіночі штани",
-        description: "фів",
+        description: "Штани 'Блискавка'",
         price: 15000,
         image: [w_pants1, w_pants1_1, w_pants1_2, w_pants1_3, w_pants1_4],
         category: "Women",
@@ -459,7 +497,7 @@ export const products = [
     {
         _id: "pw000002",
         name: "Жіночі штани",
-        description: "фів",
+        description: "Штани 'Золотий перетин'",
         price: 33000,
         image: [w_pants2, w_pants2_1, w_pants2_2, w_pants2_3, w_pants2_4],
         category: "Women",
@@ -471,7 +509,7 @@ export const products = [
     {
         _id: "pw000003",
         name: "Жіночі штани",
-        description: "фів",
+        description: "Штани з принтом 'USA'",
         price: 67000,
         image: [w_pants3, w_pants3_1, w_pants3_2, w_pants3_3, w_pants3_4],
         category: "Women",
@@ -483,7 +521,7 @@ export const products = [
     {
         _id: "pw000004",
         name: "Жіночі штани",
-        description: "фів",
+        description: "Штани 'Хвилечка'",
         price: 78000,
         image: [w_pants4, w_pants4_1, w_pants4_2, w_pants4_3, w_pants4_4],
         category: "Women",
@@ -496,7 +534,7 @@ export const products = [
     {
         _id: "sw000001",
         name: "Жіночий светр",
-        description: "фпфівф",
+        description: "Светр 'Клумба'",
         price: 19000,
         image: [w_sweater1, w_sweater1_1, w_sweater1_2,  w_sweater1_3, w_sweater1_4],
         category: "Women",
@@ -509,7 +547,7 @@ export const products = [
     {
         _id: "sw000002",
         name: "Жіночий светр",
-        description: "фпфівф",
+        description: "Светр 'Чорна Папуга'",
         price: 56000,
         image: [w_sweater2, w_sweater2_1, w_sweater2_2,  w_sweater2_3],
         category: "Women",
@@ -521,7 +559,7 @@ export const products = [
     {
         _id: "sw000003",
         name: "Жіночий светр",
-        description: "фпфівф",
+        description: "Светр 'Зоряне Сяйво'",
         price: 71200,
         image: [w_sweater3, w_sweater3_1, w_sweater3_2,  w_sweater3_3, w_sweater3_4],
         category: "Women",
@@ -533,7 +571,7 @@ export const products = [
     {
         _id: "sw000004",
         name: "Жіночий светр",
-        description: "фпфівф",
+        description: "Светр 'Зоряний Тигр'",
         price: 11000,
         image: [w_sweater4, w_sweater4_1, w_sweater4_2,  w_sweater4_3],
         category: "Women",
@@ -546,7 +584,7 @@ export const products = [
     {
         _id: "pk000001",
         name: "Дитячі штани",
-        description: "фів",
+        description: "Штани 'Стиляга'",
         price: 67000,
         image: [k_pants1, k_pants1_1, k_pants1_2, k_pants1_3],
         category: "Kids",
@@ -557,8 +595,8 @@ export const products = [
     },
     {
         _id: "pk000002",
-        name: "Дитячі штани",
-        description: "фів",
+        name: "Штани",
+        description: "Штани Клітинка",
         price: 78000,
         image: [k_pants2, k_pants2_1, k_pants2_2, k_pants2_3],
         category: "Kids",
