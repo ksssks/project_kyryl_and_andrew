@@ -7,7 +7,7 @@ import SizeChart from "../components/SizeChart.jsx";
 
 const Product = () => {
     const {productId} = useParams();
-    const {products, currency} = useContext(ShopContext);
+    const {products, currency, addToCart} = useContext(ShopContext);
     const [productData, setProductData] = useState(false)
     const [image, setImage] = useState('')
     const [size, setSize] = useState('')
@@ -63,7 +63,7 @@ const Product = () => {
                                     ))}
                                 </div>
                             </div>
-                            <button className='bg-black text-white px-10 py-3 text-sm active:bg-gray-700'>Додати у
+                            <button onClick={()=>addToCart(productData._id,size)} className='bg-black text-white px-10 py-3 text-sm active:bg-gray-700'>Додати у
                                 корзину
                             </button>
                             <hr className='mt-8 sm:w-4/5'/>
