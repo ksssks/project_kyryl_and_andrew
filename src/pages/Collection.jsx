@@ -97,13 +97,13 @@ const Collection = () => {
             {/*Filters*/}
             <div className='min-w-60'>
                 <p onClick={() => setShowFilter(!showFilter)}
-                   className='my-2 text-xl flex items-center cursor-pointer gap-2'>Фільтри
+                   className='my-2 text-xl flex items-center cursor-pointer gap-2 dark:text-white'>Фільтри
                     <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown} alt=''/>
                 </p>
                 {/*Category*/}
                 <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
-                    <p className='mb-3 text-sm font-medium'>Категорії</p>
-                    <div className='flex flex-col gap-2 text-sm font-light text-gray-700 '>
+                    <p className='mb-3 text-sm font-medium dark:text-white'>Категорії</p>
+                    <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
                         <p className='flex gap-2'>
                             <input className='w-3' type="checkbox" value={'Men'} onChange={toggleCategory}/> Чоловічий
                             одяг
@@ -120,8 +120,8 @@ const Collection = () => {
                 </div>
                 {/*Subcategory filter*/}
                 <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
-                    <p className='mb-3 text-sm font-medium'>Тип товару</p>
-                    <div className='flex flex-col gap-2 text-sm font-light text-gray-700 '>
+                    <p className='mb-3 text-sm font-medium dark:text-white'>Тип товару</p>
+                    <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
                         <p className='flex gap-2'>
                             <input className='w-3' type="checkbox" value={'Sweaters'} onChange={toggleSubCategory}/> Светри та худі
                         </p>

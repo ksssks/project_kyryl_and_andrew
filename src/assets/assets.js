@@ -1,3 +1,25 @@
+import trendify from './svg/trendify.svg'
+import trash from './svg/trash.svg'
+import search from './svg/search.svg'
+import profile from './svg/profile.svg'
+import cart from './svg/cart.svg'
+import menu from './svg/menu.svg'
+import dropdown from './svg/dropdown.svg'
+import coin from './svg/coin.svg'
+import trophy from './svg/trophy.svg'
+import question from './svg/question.svg'
+import twitter from './svg/twitter-x.svg'
+import facebook from './svg/facebook.svg'
+import instagram from './svg/instagram.svg'
+import hero from './svg/hero.png'
+import cross from './svg/cross.svg'
+import star_fill from './svg/star-fill.svg'
+import sun from './svg/sun.svg'
+import moon from './svg/moon.svg'
+import stripe from './svg/stripe.svg'
+import razorpay from './svg/razorpay.svg'
+
+
 {/*Men clothes*/}
 import tshirt1 from './men/men_tshirts/tshirt1/tshirt1.png'
 import tshirt1_1 from './men/men_tshirts/tshirt1/tshirt1_1.png'
@@ -98,22 +120,6 @@ import sweater4_2 from './men/men_sweaters/sweater4/sweater4_2.png'
 import sweater4_3 from './men/men_sweaters/sweater4/sweater4_3.png'
 import sweater4_4 from './men/men_sweaters/sweater4/sweater4_4.png'
 
-import trendify from './svg/trendify.svg'
-import trash from './svg/trash.svg'
-import search from './svg/search.svg'
-import profile from './svg/profile.svg'
-import cart from './svg/cart.svg'
-import menu from './svg/menu.svg'
-import dropdown from './svg/dropdown.svg'
-import coin from './svg/coin.svg'
-import trophy from './svg/trophy.svg'
-import question from './svg/question.svg'
-import twitter from './svg/twitter-x.svg'
-import facebook from './svg/facebook.svg'
-import instagram from './svg/instagram.svg'
-import hero from './svg/hero.png'
-import cross from './svg/cross.svg'
-import star_fill from './svg/star-fill.svg'
 
 {/*Women clothes*/}
 import w_tshirt1 from './women/women_tshirts/tshirt1/tshirt1.png'
@@ -220,7 +226,11 @@ export const assets = {
     tshirt1_2,
     tshirt1_3,
     tshirt1_4,
-    star_fill
+    star_fill,
+    sun,
+    moon,
+    stripe,
+    razorpay
 }
 
 export const products = [

@@ -6,7 +6,7 @@ import CartTotal from "../components/CartTotal.jsx";
 
 const Cart = () => {
 
-    const {products, currency, cartItems, updateQuantity} = useContext(ShopContext);
+    const {products, currency, cartItems, updateQuantity, navigate} = useContext(ShopContext);
 
     const [cartData, setCartData] = useState([]);
     useEffect(() => {
@@ -42,9 +42,9 @@ const Cart = () => {
                             <div className='flex items-start gap-6'>
                                 <img className='w-16 sm:w-20' src={productData.image[0]} alt='Photo of a product'/>
                                 <div>
-                                    <p className='text-xs sm:text-lg font-medium'>{productData.name}</p>
+                                    <p className='text-xs sm:text-lg font-medium dark:text-white'>{productData.name}</p>
                                     <div className='flex items-center gap-5 mt-2'>
-                                        <p>{productData.price}{currency}</p>
+                                        <p className='dark:text-white'>{productData.price}{currency}</p>
                                         <p className='px-2 sm:px-3 sm:py-1 border bg-slate-50 rounded'>{item.size}</p>
                                     </div>
                                 </div>
@@ -54,7 +54,7 @@ const Cart = () => {
                                 className='border max-w-10 sm:max-w-20 px-1 sm:px-2 py-1 rounded' type='number' min={1}
                                 defaultValue={item.quantity}/>
                             <img onClick={() => updateQuantity(item._id, item.size, 0)}
-                                 className='w-4 mr-4 sm:w-6 cursor-pointer' src={assets.trash} alt='Bin icon'/>
+                                 className='w-4 mr-4 sm:w-6 cursor-pointer dark:invert dark:bg-white' src={assets.trash} alt='Bin icon'/>
                         </div>
                     )
 
@@ -64,7 +64,7 @@ const Cart = () => {
                 <div className='w-full sm:w-[450px]'>
                     <CartTotal/>
                     <div className='w-full text-end'>
-                        <button className='bg-black text-white text-sm my-8 px-8 py-3 rounded'>Перейти до оплати</button>
+                        <button onClick ={()=>navigate('/place-order')} className='bg-black text-white text-sm my-8 px-8 py-3 rounded dark:text-black dark:bg-white'>Перейти до оплати</button>
                     </div>
                 </div>
             </div>

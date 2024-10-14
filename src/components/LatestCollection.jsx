@@ -15,7 +15,7 @@ const LatestCollection = () => {
         <div className='my-10'>
             <div className='text-center py-8 text-3xl'>
                 <Title text1={'Остання'} text2={'колекція'}/>
-                <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
+                <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600 dark:text-white'>
                     У нашому інтернет-магазині представлена нова колекція одягу преміум-класу. Колекція поєднує
                     легкість, стиль і комфорт, створюючи ідеальний вибір для теплих днів. Тут ви знайдете ексклюзивні
                     моделі з натуральних матеріалів, таких як бавовна та шовк, що забезпечують комфорт і свободу рухів.

@@ -15,7 +15,7 @@ const BestSeller = () => {
         <div className='my-10'>
             <div className='text-center text-3xl py-8'>
                 <Title text1={'Найчастіше'} text2={'купують'}/>
-                <p className='w=3/4 ,m-auto text-xs sm:text-sm md:text-base text-gray-600'>
+                <p className='w=3/4 ,m-auto text-xs sm:text-sm md:text-base text-gray-600 dark:text-white'>
                     У цьому розділі ви знайдете найпопулярніші моделі одягу преміум-класу, які вже стали улюбленцями
                     наших
                     клієнтів. Це речі, що вирізняються своєю універсальністю, бездоганним стилем та високою якістю

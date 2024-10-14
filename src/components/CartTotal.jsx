@@ -11,7 +11,7 @@ const CartTotal = () => {
             <div className='text-2xl'>
                 <Title text1={'Загальна'} text2={'сума'}/>
             </div>
-            <div className='flex flex-col gap-2 mt-2 text-sm'>
+            <div className='flex flex-col gap-2 mt-2 text-sm dark:bg-black dark:text-white'>
                 <div className='flex justify-between'>
                     <p>Проміжний підсумок</p>
                     <p>{getCartAmount()}.00{currency}</p>
