@@ -11,16 +11,21 @@ import question from './svg/question.svg'
 import twitter from './svg/twitter-x.svg'
 import facebook from './svg/facebook.svg'
 import instagram from './svg/instagram.svg'
-import hero from './svg/hero.png'
 import cross from './svg/cross.svg'
 import star_fill from './svg/star-fill.svg'
 import sun from './svg/sun.svg'
 import moon from './svg/moon.svg'
 import stripe from './svg/stripe.svg'
 import razorpay from './svg/razorpay.svg'
+import hello from './svg/hello.svg'
 
+import hero from './site_img/hero.png'
+import shop from './site_img/shop.jpg'
+import shop_inside from './site_img/shop_inside.jpg'
+import shopping_woman from './site_img/shopping_woman.png'
 
-{/*Men clothes*/}
+{/*Men clothes*/
+}
 import tshirt1 from './men/men_tshirts/tshirt1/tshirt1.png'
 import tshirt1_1 from './men/men_tshirts/tshirt1/tshirt1_1.png'
 import tshirt1_2 from './men/men_tshirts/tshirt1/tshirt1_2.png'
@@ -96,6 +101,23 @@ import pants5_2 from './men/men_pants/pants5/pants5_2.png'
 import pants5_3 from './men/men_pants/pants5/pants5_3.png'
 import pants5_4 from './men/men_pants/pants5/pants5_4.png'
 
+import pants6 from './men/men_pants/pants6/pants6.png'
+import pants6_1 from './men/men_pants/pants6/pants6_1.png'
+import pants6_2 from './men/men_pants/pants6/pants6_2.png'
+import pants6_3 from './men/men_pants/pants6/pants6_3.png'
+import pants6_4 from './men/men_pants/pants6/pants6_4.png'
+
+import pants7 from './men/men_pants/pants7/pants7.png'
+import pants7_1 from './men/men_pants/pants7/pants7_1.png'
+import pants7_2 from './men/men_pants/pants7/pants7_2.png'
+import pants7_3 from './men/men_pants/pants7/pants7_3.png'
+import pants7_4 from './men/men_pants/pants7/pants7_4.png'
+
+import pants8 from './men/men_pants/pants8/pants8.png'
+import pants8_1 from './men/men_pants/pants8/pants8_1.png'
+import pants8_2 from './men/men_pants/pants8/pants8_2.png'
+import pants8_3 from './men/men_pants/pants8/pants8_3.png'
+
 import sweater1 from './men/men_sweaters/sweater1/sweater1.png'
 import sweater1_1 from './men/men_sweaters/sweater1/sweater1_1.png'
 import sweater1_2 from './men/men_sweaters/sweater1/sweater1_2.png'
@@ -120,8 +142,30 @@ import sweater4_2 from './men/men_sweaters/sweater4/sweater4_2.png'
 import sweater4_3 from './men/men_sweaters/sweater4/sweater4_3.png'
 import sweater4_4 from './men/men_sweaters/sweater4/sweater4_4.png'
 
+import sweater5 from './men/men_sweaters/sweater5/sweater5.png'
+import sweater5_1 from './men/men_sweaters/sweater5/sweater5_1.png'
+import sweater5_2 from './men/men_sweaters/sweater5/sweater5_2.png'
+import sweater5_3 from './men/men_sweaters/sweater5/sweater5_3.png'
+import sweater5_4 from './men/men_sweaters/sweater5/sweater5_4.png'
 
-{/*Women clothes*/}
+import sweater6 from './men/men_sweaters/sweater6/sweater6.png'
+import sweater6_1 from './men/men_sweaters/sweater6/sweater6_1.png'
+import sweater6_2 from './men/men_sweaters/sweater6/sweater6_2.png'
+import sweater6_3 from './men/men_sweaters/sweater6/sweater6_3.png'
+import sweater6_4 from './men/men_sweaters/sweater6/sweater6_4.png'
+
+import sweater7 from './men/men_sweaters/sweater7/sweater7.png'
+import sweater7_1 from './men/men_sweaters/sweater7/sweater7_1.png'
+import sweater7_2 from './men/men_sweaters/sweater7/sweater7_2.png'
+import sweater7_3 from './men/men_sweaters/sweater7/sweater7_3.png'
+import sweater7_4 from './men/men_sweaters/sweater7/sweater7_4.png'
+
+import sweater8 from './men/men_sweaters/sweater8/sweater8.png'
+import sweater8_1 from './men/men_sweaters/sweater8/sweater8_1.png'
+import sweater8_2 from './men/men_sweaters/sweater8/sweater8_2.png'
+import sweater8_3 from './men/men_sweaters/sweater8/sweater8_3.png'
+{/*Women clothes*/
+}
 import w_tshirt1 from './women/women_tshirts/tshirt1/tshirt1.png'
 import w_tshirt1_1 from './women/women_tshirts/tshirt1/tshirt1_1.png'
 import w_tshirt1_2 from './women/women_tshirts/tshirt1/tshirt1_2.png'
@@ -143,8 +187,31 @@ import w_tshirt4 from './women/women_tshirts/tshirt4/tshirt4.png'
 import w_tshirt4_1 from './women/women_tshirts/tshirt4/tshirt4_1.png'
 import w_tshirt4_2 from './women/women_tshirts/tshirt4/tshirt4_2.png'
 import w_tshirt4_3 from './women/women_tshirts/tshirt4/tshirt4_3.png'
-import w_tshirt4_4 from './women/women_tshirts/tshirt4/tshirt4_3.png'
+import w_tshirt4_4 from './women/women_tshirts/tshirt4/tshirt4_4.png'
 
+import w_tshirt5 from './women/women_tshirts/tshirt5/tshirt5.png'
+import w_tshirt5_1 from './women/women_tshirts/tshirt5/tshirt5_1.png'
+import w_tshirt5_2 from './women/women_tshirts/tshirt5/tshirt5_2.png'
+import w_tshirt5_3 from './women/women_tshirts/tshirt5/tshirt5_3.png'
+import w_tshirt5_4 from './women/women_tshirts/tshirt5/tshirt5_4.png'
+
+import w_tshirt6 from './women/women_tshirts/tshirt6/tshirt6.png'
+import w_tshirt6_1 from './women/women_tshirts/tshirt6/tshirt6_1.png'
+import w_tshirt6_2 from './women/women_tshirts/tshirt6/tshirt6_2.png'
+import w_tshirt6_3 from './women/women_tshirts/tshirt6/tshirt6_3.png'
+import w_tshirt6_4 from './women/women_tshirts/tshirt6/tshirt6_4.png'
+
+import w_tshirt7 from './women/women_tshirts/tshirt7/tshirt7.png'
+import w_tshirt7_1 from './women/women_tshirts/tshirt7/tshirt7_1.png'
+import w_tshirt7_2 from './women/women_tshirts/tshirt7/tshirt7_2.png'
+import w_tshirt7_3 from './women/women_tshirts/tshirt7/tshirt7_3.png'
+import w_tshirt7_4 from './women/women_tshirts/tshirt7/tshirt7_4.png'
+
+import w_tshirt8 from './women/women_tshirts/tshirt8/tshirt8.png'
+import w_tshirt8_1 from './women/women_tshirts/tshirt8/tshirt8_1.png'
+import w_tshirt8_2 from './women/women_tshirts/tshirt8/tshirt8_2.png'
+import w_tshirt8_3 from './women/women_tshirts/tshirt8/tshirt8_3.png'
+import w_tshirt8_4 from './women/women_tshirts/tshirt8/tshirt8_3.png'
 
 import w_pants1 from './women/women_pants/pants1/pants1.png'
 import w_pants1_1 from './women/women_pants/pants1/pants1_1.png'
@@ -193,7 +260,8 @@ import w_sweater4_1 from './women/women_sweaters/sweater4/sweater4_1.png'
 import w_sweater4_2 from './women/women_sweaters/sweater4/sweater4_2.png'
 import w_sweater4_3 from './women/women_sweaters/sweater4/sweater4_3.png'
 
-{/*Kids clothes*/}
+{/*Kids clothes*/
+}
 
 import k_pants1 from './kids/kids_pants/pants1/pants1.png'
 import k_pants1_1 from './kids/kids_pants/pants1/pants1_1.png'
@@ -230,7 +298,11 @@ export const assets = {
     sun,
     moon,
     stripe,
-    razorpay
+    razorpay,
+    hello,
+    shop,
+    shopping_woman,
+    shop_inside
 }
 
 export const products = [
@@ -315,7 +387,7 @@ export const products = [
         image: [tshirt7, tshirt7_1, tshirt7_2, tshirt7_3, tshirt7_4],
         category: "Men",
         subCategory: "T-Shirts",
-        sizes: ["S","M", "XL"],
+        sizes: ["S", "M", "XL"],
         date: 777777777,
         bestseller: false
     },
@@ -392,11 +464,47 @@ export const products = [
         bestseller: false
     },
     {
+        _id: "p000006",
+        name: "Чоловічі штани",
+        description: "Штани шаровари з відливом ",
+        price: 41600,
+        image: [pants6, pants6_1, pants6_2, pants6_3, pants6_4],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["S", "M"],
+        date: 11232412,
+        bestseller: false
+    },
+    {
+        _id: "p000007",
+        name: "Чоловічі штани",
+        description: "Штани клаптикові з переробленого матеріалу",
+        price: 23000,
+        image: [pants7, pants7_1, pants7_2, pants7_3, pants7_4],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: ["S", "M", "L", "XL"],
+        date: 11232412,
+        bestseller: false
+    },
+    {
+        _id: "p000007",
+        name: "Чоловічі штани",
+        description: "Штани 'Скуф'",
+        price: 98000,
+        image: [pants8, pants8_1, pants8_2, pants8_3],
+        category: "Men",
+        subCategory: "Pants",
+        sizes: [ "M", "L"],
+        date: 11232412,
+        bestseller: false
+    },
+    {
         _id: "s000001",
         name: "Чоловічий светр",
         description: "Светр 'Морячок'",
         price: 140000,
-        image: [sweater1, sweater1_1, sweater1_2,  sweater1_3, sweater1_4],
+        image: [sweater1, sweater1_1, sweater1_2, sweater1_3, sweater1_4],
         category: "Men",
         subCategory: "Sweaters",
         sizes: ["S", "M"],
@@ -408,7 +516,7 @@ export const products = [
         name: "Чоловічий светр",
         description: "Светр 'Рушничок'",
         price: 140000,
-        image: [sweater2, sweater2_1, sweater2_2,  sweater2_3, sweater2_4],
+        image: [sweater2, sweater2_1, sweater2_2, sweater2_3, sweater2_4],
         category: "Men",
         subCategory: "Sweaters",
         sizes: ["L", "XL"],
@@ -420,7 +528,7 @@ export const products = [
         name: "Чоловічий светр",
         description: "Шерстяний светр 'Килимок'",
         price: 11200,
-        image: [sweater3, sweater3_1, sweater3_2,  sweater3_3, sweater3_4],
+        image: [sweater3, sweater3_1, sweater3_2, sweater3_3, sweater3_4],
         category: "Men",
         subCategory: "Sweaters",
         sizes: ["S", "XL"],
@@ -432,14 +540,61 @@ export const products = [
         name: "Чоловічий светр",
         description: "Чоловічий светр 'Барбі' подовжений",
         price: 71000,
-        image: [sweater4, sweater4_1, sweater4_2,  sweater4_3, sweater4_4],
+        image: [sweater4, sweater4_1, sweater4_2, sweater4_3, sweater4_4],
         category: "Men",
         subCategory: "Sweaters",
         sizes: ["S", "XL"],
         date: 131412,
         bestseller: false
     },
-
+    {
+        _id: "s000005",
+        name: "Чоловічий светр",
+        description: "Чоловічий светр 'Око'",
+        price: 63500,
+        image: [sweater5, sweater5_1, sweater5_2, sweater5_3, sweater5_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["S", "M", "L", "XL"],
+        date: 131412,
+        bestseller: false
+    },
+    {
+        _id: "s000006",
+        name: "Чоловічий светр",
+        description: "Чоловічий светр 'Крокодильчик'",
+        price: 77777,
+        image: [sweater6, sweater6_1, sweater6_2, sweater6_3, sweater6_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["M", "L", "XL"],
+        date: 131412,
+        bestseller: false
+    },
+    {
+        _id: "s000007",
+        name: "Чоловічий светр",
+        description: "Чоловічий светр 'Ведмежа'",
+        price: 10000,
+        image: [sweater7, sweater7_1, sweater7_2, sweater7_3, sweater7_4],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["M", "XL"],
+        date: 131412,
+        bestseller: false
+    },
+    {
+        _id: "s000008",
+        name: "Чоловічий светр",
+        description: "Чоловічий светр 'Голубий вагончик'",
+        price: 66999,
+        image: [sweater8, sweater8_1, sweater8_2, sweater8_3],
+        category: "Men",
+        subCategory: "Sweaters",
+        sizes: ["L", "XL"],
+        date: 131412,
+        bestseller: false
+    },
     /* Women clothes*/
     {
         _id: "tw000001",
@@ -449,7 +604,7 @@ export const products = [
         image: [w_tshirt1, w_tshirt1_1, w_tshirt1_2, w_tshirt1_3, w_tshirt1_4],
         category: "Women",
         subCategory: "T-Shirts",
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S", "M", "L"],
         date: 12343211,
         bestseller: false
     },
@@ -475,7 +630,7 @@ export const products = [
         image: [w_tshirt3, w_tshirt3_1, w_tshirt3_2, w_tshirt3_3, w_tshirt3_4],
         category: "Women",
         subCategory: "T-Shirts",
-        sizes: ["S", "L", "XL"],
+        sizes: ["S", "L"],
         date: 323423433,
         bestseller: false
     },
@@ -487,9 +642,60 @@ export const products = [
         image: [w_tshirt4, w_tshirt4_1, w_tshirt4_2, w_tshirt4_3, w_tshirt4_4],
         category: "Women",
         subCategory: "T-Shirts",
-        sizes: ["L", "XL"],
+        sizes: ["S", "M"],
         date: 4434544,
         bestseller: true
+    },
+    {
+        _id: "tw000005",
+        name: "Жіноча футболка",
+        description: "Футболка 'Леопард'",
+        price: 13400,
+        image: [w_tshirt5, w_tshirt5_1, w_tshirt5_2, w_tshirt5_3, w_tshirt5_4],
+        category: "Women",
+        subCategory: "T-Shirts",
+        sizes: ["S"],
+        date: 4434544,
+        bestseller: false,
+    },
+
+    {
+        _id: "tw000006",
+        name: "Жіноча футболка",
+        description: "Футболка 'Леопард'",
+        price: 87100,
+        image: [w_tshirt6, w_tshirt6_1, w_tshirt6_2, w_tshirt6_3, w_tshirt6_4],
+        category: "Women",
+        subCategory: "T-Shirts",
+        sizes: ["S", "M"],
+        date: 4434544,
+        bestseller: false,
+    },
+
+    {
+        _id: "tw000007",
+        name: "Жіноча футболка",
+        description: "Футболка 'Леопард'",
+        price: 11600,
+        image: [w_tshirt7, w_tshirt7_1, w_tshirt7_2, w_tshirt7_3, w_tshirt7_4],
+        category: "Women",
+        subCategory: "T-Shirts",
+        sizes: ["L"],
+        date: 4434544,
+        bestseller: false,
+    },
+
+    {
+        _id: "tw000008",
+        name: "Жіноча футболка",
+        description: "Футболка 'Леопард'",
+        price: 73000,
+        image: [w_tshirt8, w_tshirt8_1, w_tshirt8_2, w_tshirt8_3, w_tshirt8_4],
+        category: "Women",
+        subCategory: "T-Shirts",
+        sizes: ["M", "L"],
+        date: 4434544,
+        bestseller: false,
     },
 
     {
@@ -546,7 +752,7 @@ export const products = [
         name: "Жіночий светр",
         description: "Светр 'Клумба'",
         price: 19000,
-        image: [w_sweater1, w_sweater1_1, w_sweater1_2,  w_sweater1_3, w_sweater1_4],
+        image: [w_sweater1, w_sweater1_1, w_sweater1_2, w_sweater1_3, w_sweater1_4],
         category: "Women",
         subCategory: "Sweaters",
         sizes: ["S", "M"],
@@ -559,7 +765,7 @@ export const products = [
         name: "Жіночий светр",
         description: "Светр 'Чорна Папуга'",
         price: 56000,
-        image: [w_sweater2, w_sweater2_1, w_sweater2_2,  w_sweater2_3],
+        image: [w_sweater2, w_sweater2_1, w_sweater2_2, w_sweater2_3],
         category: "Women",
         subCategory: "Sweaters",
         sizes: ["L", "XL"],
@@ -571,7 +777,7 @@ export const products = [
         name: "Жіночий светр",
         description: "Светр 'Зоряне Сяйво'",
         price: 71200,
-        image: [w_sweater3, w_sweater3_1, w_sweater3_2,  w_sweater3_3, w_sweater3_4],
+        image: [w_sweater3, w_sweater3_1, w_sweater3_2, w_sweater3_3, w_sweater3_4],
         category: "Women",
         subCategory: "Sweaters",
         sizes: ["S", "XL"],
@@ -583,7 +789,7 @@ export const products = [
         name: "Жіночий светр",
         description: "Светр 'Зоряний Тигр'",
         price: 11000,
-        image: [w_sweater4, w_sweater4_1, w_sweater4_2,  w_sweater4_3],
+        image: [w_sweater4, w_sweater4_1, w_sweater4_2, w_sweater4_3],
         category: "Women",
         subCategory: "Sweaters",
         sizes: ["S", "XL"],
