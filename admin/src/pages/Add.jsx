@@ -10,12 +10,13 @@ const Add = ({ token }) => {
     const [image2, setImage2] = useState(false)
     const [image3, setImage3] = useState(false)
     const [image4, setImage4] = useState(false)
+    const [image5, setImage5] = useState(false)
 
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
-    const [category, setCategory] = useState("Men");
-    const [subCategory, setSubCategory] = useState("Topwear");
+    const [category, setCategory] = useState("Чоловічий одяг");
+    const [subCategory, setSubCategory] = useState("Светри та худі");
     const [bestseller, setBestseller] = useState(false);
     const [sizes, setSizes] = useState([]);
 
@@ -38,6 +39,7 @@ const Add = ({ token }) => {
             image2 && formData.append("image2", image2)
             image3 && formData.append("image3", image3)
             image4 && formData.append("image4", image4)
+            image5 && formData.append("image5", image5)
 
             const response = await axios.post(backendUrl + "/api/product/add", formData, { headers: { token } })
 
@@ -49,6 +51,7 @@ const Add = ({ token }) => {
                 setImage2(false)
                 setImage3(false)
                 setImage4(false)
+                setImage5(false)
                 setPrice('')
             } else {
                 toast.error(response.data.message)
@@ -82,6 +85,10 @@ const Add = ({ token }) => {
                         <img className='w-20' src={!image4 ? assets.upload_area : URL.createObjectURL(image4)} alt='' />
                         <input onChange={(e) => setImage4(e.target.files[0])} type='file' id='image4' hidden />
                     </label>
+                    <label htmlFor='image5'>
+                        <img className='w-20' src={!image5 ? assets.upload_area : URL.createObjectURL(image5)} alt='' />
+                        <input onChange={(e) => setImage5(e.target.files[0])} type='file' id='image5' hidden />
+                    </label>
                 </div>
             </div>
 
@@ -99,18 +106,18 @@ const Add = ({ token }) => {
                 <div>
                     <p className='mb-2'>Product category</p>
                     <select onChange={(e) => setCategory(e.target.value)} className='w-ful px-3 py-2'>
-                        <option value="Men">Men</option>
-                        <option value="Women">Women</option>
-                        <option value="Kids">Kids</option>
+                        <option value="Чоловічий одяг">Чоловічий одяг</option>
+                        <option value="Жіночий одяг">Жіночий одяг</option>
+                        <option value="Дитячий одяг">Дитячий одяг</option>
                     </select>
                 </div>
 
                 <div>
                     <p className='mb-2'>Subcategory</p>
                     <select onChange={(e) => setSubCategory(e.target.value)} className='w-ful px-3 py-2'>
-                        <option value="Topwear">Topwear</option>
-                        <option value="Bottomwear">Bottomwear</option>
-                        <option value="Winterwear">Winterwear</option>
+                        <option value="Светри та худі">Светри та худі</option>
+                        <option value="Футболки та реглани">Футболки та реглани</option>
+                        <option value="Брюки та джинси">Брюки та джинси</option>
                     </select>
                 </div>
 

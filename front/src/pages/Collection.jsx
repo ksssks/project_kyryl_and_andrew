@@ -1,11 +1,11 @@
-import React, {useContext, useEffect, useState} from 'react';
-import {ShopContext} from "../context/ShopContext.jsx";
-import {assets} from "../assets/assets.js";
+import React, { useContext, useEffect, useState } from 'react';
+import { ShopContext } from "../context/ShopContext.jsx";
+import { assets } from "../assets/assets.js";
 import Title from "../components/Title.jsx";
 import ProductItem from "../components/ProductItem.jsx";
 
 const Collection = () => {
-    const {products, search, showSearch} = useContext(ShopContext);
+    const { products, search, showSearch } = useContext(ShopContext);
     const [showFilter, setShowFilter] = useState(true);
     const [filterProducts, setFilterProducts] = useState([]);
     const [category, setCategory] = useState([]);
@@ -68,7 +68,7 @@ const Collection = () => {
 
     useEffect(() => {
         applyFilter();
-    }, [category, subCategory, search, showSearch]);
+    }, [category, subCategory, search, showSearch, products]);
 
     useEffect(() => {
         sortProduct();
@@ -97,23 +97,23 @@ const Collection = () => {
             {/*Filters*/}
             <div className='min-w-60'>
                 <p onClick={() => setShowFilter(!showFilter)}
-                   className='my-2 text-xl flex items-center cursor-pointer gap-2 dark:text-white'>Фільтри
-                    <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown} alt=''/>
+                    className='my-2 text-xl flex items-center cursor-pointer gap-2 dark:text-white'>Фільтри
+                    <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown} alt='' />
                 </p>
                 {/*Category*/}
                 <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
                     <p className='mb-3 text-sm font-medium dark:text-white'>Категорії</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Men'} onChange={toggleCategory}/> Чоловічий
+                            <input className='w-3' type="checkbox" value={'Men'} onChange={toggleCategory} /> Чоловічий
                             одяг
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Women'} onChange={toggleCategory}/> Жіночий
+                            <input className='w-3' type="checkbox" value={'Women'} onChange={toggleCategory} /> Жіночий
                             одяг
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory}/> Дитячий
+                            <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} /> Дитячий
                             одяг
                         </p>
                     </div>
@@ -123,13 +123,13 @@ const Collection = () => {
                     <p className='mb-3 text-sm font-medium dark:text-white'>Тип товару</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Sweaters'} onChange={toggleSubCategory}/> Светри та худі
+                            <input className='w-3' type="checkbox" value={'Sweaters'} onChange={toggleSubCategory} /> Светри та худі
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'T-Shirts'} onChange={toggleSubCategory}/> Футболки та реглани
+                            <input className='w-3' type="checkbox" value={'T-Shirts'} onChange={toggleSubCategory} /> Футболки та реглани
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Pants'} onChange={toggleSubCategory}/> Брюки та джинси
+                            <input className='w-3' type="checkbox" value={'Pants'} onChange={toggleSubCategory} /> Брюки та джинси
                         </p>
                     </div>
                 </div>
@@ -137,7 +137,7 @@ const Collection = () => {
             {/* Right side */}
             <div className='flex-1'>
                 <div className='flex justify-between text-base sm:text-2xl mb-4'>
-                    <Title text1={'Усі'} text2={'колекції'}/>
+                    <Title text1={'Усі'} text2={'колекції'} />
                     {/*Product Sort*/}
                     <select onChange={(e) => setSortType(e.target.value)} className='border-2 border-gray-300 text-sm px-2'>
                         <option value='relevant'>Сортувати за релевантністю</option>
@@ -148,7 +148,7 @@ const Collection = () => {
                 {/*Map products*/}
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
                     {currentProducts.map((item, index) => (
-                        <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image}/>
+                        <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
                     ))}
                 </div>
                 {/* Pagination */}
