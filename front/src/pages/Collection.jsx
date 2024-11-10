@@ -105,15 +105,15 @@ const Collection = () => {
                     <p className='mb-3 text-sm font-medium dark:text-white'>Категорії</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Men'} onChange={toggleCategory} /> Чоловічий
+                            <input className='w-3' type="checkbox" value={'Чоловічий одяг'} onChange={toggleCategory} /> Чоловічий
                             одяг
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Women'} onChange={toggleCategory} /> Жіночий
+                            <input className='w-3' type="checkbox" value={'Жіночий одяг'} onChange={toggleCategory} /> Жіночий
                             одяг
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Kids'} onChange={toggleCategory} /> Дитячий
+                            <input className='w-3' type="checkbox" value={'Дитячий одяг'} onChange={toggleCategory} /> Дитячий
                             одяг
                         </p>
                     </div>
@@ -123,13 +123,13 @@ const Collection = () => {
                     <p className='mb-3 text-sm font-medium dark:text-white'>Тип товару</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Sweaters'} onChange={toggleSubCategory} /> Светри та худі
+                            <input className='w-3' type="checkbox" value={'Светри та худі'} onChange={toggleSubCategory} /> Светри та худі
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'T-Shirts'} onChange={toggleSubCategory} /> Футболки та реглани
+                            <input className='w-3' type="checkbox" value={'Футболки та реглани'} onChange={toggleSubCategory} /> Футболки та реглани
                         </p>
                         <p className='flex gap-2'>
-                            <input className='w-3' type="checkbox" value={'Pants'} onChange={toggleSubCategory} /> Брюки та джинси
+                            <input className='w-3' type="checkbox" value={'Брюки та джинси'} onChange={toggleSubCategory} /> Брюки та джинси
                         </p>
                     </div>
                 </div>
