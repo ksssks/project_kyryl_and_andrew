@@ -23,16 +23,16 @@ const PlaceOrder = () => {
         phone: ''
     })
 
-    const onChangeHandler = (e) => {
-        const name = e.target.name
-        const value = e.target.value
+    const onChangeHandler = (event) => {
+        const name = event.target.name
+        const value = event.target.value
 
         setFormData(data => ({ ...data, [name]: value }))
 
     }
 
-    const onSubmitHandler = async (e) => {
-        e.preventDefault()
+    const onSubmitHandler = async (event) => {
+        event.preventDefault()
         try {
 
             let orderItems = []
@@ -59,7 +59,10 @@ const PlaceOrder = () => {
             switch (method) {
 
                 case 'cod':
+                    console.log(token);
+                    
                     const response = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { token } })
+                    
                     if (response.data.success) {
                         setCartItems({})
                         navigate('/orders')
