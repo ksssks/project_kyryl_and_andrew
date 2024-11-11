@@ -5,14 +5,14 @@ const placeOrder = async (req, res) => {
 
     try {
 
-        const { userID, items, amount, address } = req.body;
+        const { userId, items, amount, address } = req.body
 
         const orderData = {
-            userID,
+            userId,
             items,
             address,
             amount,
-            paymentMethod: "COD",
+            paymentMethod: "Оплата при отриманні",
             payment: false,
             date: Date.now()
         }
@@ -20,7 +20,7 @@ const placeOrder = async (req, res) => {
         const newOrder = new orderModel(orderData)
         await newOrder.save()
 
-        await userModel.findByIdAndUpdate(userID, { cartData: {} })
+        await userModel.findByIdAndUpdate(userId, { cartData: {} })
 
         res.json({ success: true, message: "Order placed" })
 
@@ -40,6 +40,10 @@ const placeOrderRazorpay = async (req, res) => {
 }
 
 const allOrders = async (req, res) => {
+    
+}
+
+const userOrders = async (req, res) => {
     try {
 
         const { userId } = req.body
@@ -51,10 +55,6 @@ const allOrders = async (req, res) => {
         console.log(error);
         res.json({ success: false, message: error.message })
     }
-}
-
-const userOrders = async (req, res) => {
-
 }
 
 const updateStatus = async (req, res) => {
