@@ -16,7 +16,6 @@ import star_fill from './svg/star-fill.svg'
 import sun from './svg/sun.svg'
 import moon from './svg/moon.svg'
 import stripe from './svg/stripe.svg'
-import razorpay from './svg/razorpay.svg'
 import hello from './svg/hello.svg'
 
 import hero from './site_img/hero.png'
@@ -298,7 +297,6 @@ export const assets = {
     sun,
     moon,
     stripe,
-    razorpay,
     hello,
     shop,
     shopping_woman,
