@@ -14,13 +14,12 @@ const Orders = () => {
     const loadOrderData = async () => {
         
         try {
-            console.log(token);
+            if (!token) {
+                return null
+            }
             
-            
-
-
             const response = await axios.post(backendUrl + '/api/order/userorders', {}, { headers: { token } })
-            console.log(response.data);
+            
             if (response.data.success) {
                 let allOrdersItem = []
                 response.data.orders.map((order) => {
@@ -58,21 +57,22 @@ const Orders = () => {
                             <img className='w-16 sm:w-20' src={item.image[0]} alt='Product image' />
                             <div>
                                 <p className='sm:text-base font-medium'>{item.name}</p>
-                                <div className='flex items-center gap-3 mt-2 text-base text-gray-700 dark:text-white'>
+                                <div className='flex items-center gap-3 mt-1 text-base text-gray-700 dark:text-white'>
                                     <p className='text-lg'>Ціна: {item.price}{currency}</p>
-                                    <p>Кількість: 1</p>
-                                    <p>Розмір: L</p>
+                                    <p>Кількість: {item.quantity}</p>
+                                    <p>Розмір: {item.size}</p>
                                 </div>
-                                <p className='mt-2'>Дата: <span className='text-gray-400 dark:text-white'>14.10.2024</span></p>
+                                <p className='mt-1'>Дата: <span className='text-gray-400 dark:text-white'>{new Date(item.date).toLocaleDateString('uk-UA', {weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' })}</span></p>
+                                <p className='mt-1'>Спосіб оплати: <span className='text-gray-400 dark:text-white'>{item.paymentMethod}</span></p>
                             </div>
                         </div>
                         <div className='md:w-1/2 flex justify-between'>
                             <div className='flex items-center gap-2'>
                                 <p className='min-w-2 h-2 rounded-full bg-green-500'></p>
-                                <p className='text-sm md:text-base'>Готово до відправки</p>
+                                <p className='text-sm md:text-base'>{item.status}</p>
                             </div>
                         </div>
-                        <div><button className='border rounded px-4 py-2 text-sm font-medium'>
+                        <div><button onClick={loadOrderData} className='border rounded px-4 py-2 text-sm font-medium'>
                             Відслідкувати посилку
                         </button></div>
                     </div>

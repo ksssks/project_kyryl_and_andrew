@@ -23,16 +23,16 @@ const PlaceOrder = () => {
         phone: ''
     })
 
-    const onChangeHandler = (e) => {
-        const name = e.target.name
-        const value = e.target.value
+    const onChangeHandler = (event) => {
+        const name = event.target.name
+        const value = event.target.value
 
         setFormData(data => ({ ...data, [name]: value }))
 
     }
 
-    const onSubmitHandler = async (e) => {
-        e.preventDefault()
+    const onSubmitHandler = async (event) => {
+        event.preventDefault()
         try {
 
             let orderItems = []
@@ -59,12 +59,26 @@ const PlaceOrder = () => {
             switch (method) {
 
                 case 'cod':
+
                     const response = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { token } })
+                    
                     if (response.data.success) {
                         setCartItems({})
                         navigate('/orders')
                     } else {
                         toast.error(response.data.message)
+                    }
+                    break;
+
+                case 'stripe':
+
+                    const responseStripe = await axios.post(backendUrl + '/api/order/stripe', orderData, { headers: { token } })
+
+                    if (responseStripe.data.success) {
+                        const {session_url} = responseStripe.data
+                        window.location.replace(session_url)
+                    } else {
+                        toast.error(responseStripe.data.message)
                     }
                     break;
 
@@ -122,11 +136,6 @@ const PlaceOrder = () => {
                         <div onClick={() => setMethod('stripe')} className='flex items-center gap-3 border p-2 px-3 rounded cursor-pointer'>
                             <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'stripe' ? 'bg-green-700' : ''}`}></p>
                             <img className='h-5 mx-4 dark:invert dark:bg-white' src={assets.stripe}
-                                alt='Payment method' />
-                        </div>
-                        <div onClick={() => setMethod('razorpay')} className='flex items-center gap-3 border p-2 px-3 rounded cursor-pointer'>
-                            <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'razorpay' ? 'bg-green-700' : ''} `}></p>
-                            <img className='h-5 mx-4 dark:invert dark:bg-white' src={assets.razorpay}
                                 alt='Payment method' />
                         </div>
                         <div onClick={() => setMethod('cod')} className='flex items-center gap-3 border p-2 px-3 rounded cursor-pointer'>

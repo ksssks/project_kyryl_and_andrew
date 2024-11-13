@@ -92,14 +92,14 @@ const Add = ({ token }) => {
                 </div>
             </div>
 
-            <div className='w-full dark:text-white'>
-                <p className='md-2'>Назва товару</p>
-                <input onChange={(e) => setName(e.target.value)} value={name} className='w-full max-w-[500px] px-3 py-2' type='text' placeholder='Введіть назву товару' required />
+            <div className='w-full'>
+                <p className='md-2 dark:text-white'>Назва товару</p>
+                <input onChange={(e) => setName(e.target.value)} value={name} className='w-full max-w-[500px] px-3 py-2 dark:text-black' type='text' placeholder='Введіть назву товару' required />
             </div>
 
-            <div className='w-full dark:text-white'>
-                <p className='md-2'>Опис товару</p>
-                <textarea onChange={(e) => setDescription(e.target.value)} value={description} className='w-full max-w-[500px] px-3 py-2' type='text' placeholder='Введіть опис товару' required />
+            <div className='w-full'>
+                <p className='md-2 dark:text-white'>Опис товару</p>
+                <textarea onChange={(e) => setDescription(e.target.value)} value={description} className='w-full max-w-[500px] px-3 py-2 dark:text-black' type='text' placeholder='Введіть опис товару' required />
             </div>
 
             <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8 dark:text-black'>
