@@ -66,11 +66,12 @@ const Product = () => {
                             <button onClick={()=>addToCart(productData._id,size)} className='bg-black text-white px-10 py-3 text-sm active:bg-gray-700 dark:text-black dark:bg-white rounded'>Додати у
                                 корзину
                             </button>
+                            <p className='text-sm mt-5 dark:text-white'>Артикул: {productData._id}</p>
                             <hr className='mt-8 sm:w-4/5'/>
                             <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1 dark:text-white'>
                                 <p>Товар є оригінальним з сертифікатом якості.</p>
                                 <p>Є можливість оплати при отриманні.</p>
-                                <p>Легка політика повернення там обміну протягом 14 днів.</p>
+                                <p>Легка політика повернення та обміну протягом 14 днів.</p>
                             </div>
                         </div>
                     </div>

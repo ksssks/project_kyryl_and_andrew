@@ -6,6 +6,7 @@ import trendify from './svg/trendify.svg'
 import delete_product from './svg/delete_product.svg'
 import sun from './svg/sun.svg'
 import moon from './svg/moon.svg'
+import change from './svg/change.svg'
 
 
 export const assets = {
@@ -16,5 +17,6 @@ export const assets = {
     trendify,
     delete_product,
     sun,
-    moon
+    moon,
+    change
 }

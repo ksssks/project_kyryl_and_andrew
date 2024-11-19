@@ -15,10 +15,14 @@ const Add = ({ token }) => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
+    const [sale, setSale] = useState(false);
+    const [salePrice, setSalePrice] = useState("");
     const [category, setCategory] = useState("Чоловічий одяг");
     const [subCategory, setSubCategory] = useState("Светри та худі");
     const [bestseller, setBestseller] = useState(false);
     const [sizes, setSizes] = useState([]);
+    const [number, setNumber] = useState([0, 0, 0, 0, 0]);
+    const allSizes = ["S", "M", "L", "XL", "XXL"];
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
@@ -30,10 +34,29 @@ const Add = ({ token }) => {
             formData.append("name", name)
             formData.append("description", description)
             formData.append("price", price)
+            formData.append("sale", sale)
+            formData.append("salePrice", salePrice)
+
+            if (salePrice !== "") {
+                const saleModify = Math.ceil(Math.round((1 - Number(salePrice) / Number(price)) * 10000) / 100);
+                console.log((1 - Number(salePrice) / Number(price)) * 100);
+                console.log(saleModify);
+                
+                formData.append("saleModify", `-${saleModify}%`);
+            } else {
+                formData.append("saleModify", "");
+            }
+
+            
             formData.append("category", category)
             formData.append("subCategory", subCategory)
             formData.append("bestseller", bestseller)
             formData.append("sizes", JSON.stringify(sizes))
+            const filteredNumbers = sizes.map((size) => {
+                const index = allSizes.indexOf(size);
+                return number[index];
+              });
+            formData.append("number", JSON.stringify(filteredNumbers));
 
             image1 && formData.append("image1", image1)
             image2 && formData.append("image2", image2)
@@ -53,6 +76,9 @@ const Add = ({ token }) => {
                 setImage4(false)
                 setImage5(false)
                 setPrice('')
+                setSale(false)
+                setSalePrice('')
+                setBestseller(false)
             } else {
                 toast.error(response.data.message)
             }
@@ -62,6 +88,21 @@ const Add = ({ token }) => {
             toast.error(error.message)
         }
     }
+
+    const toggleSize = (size) => {
+        setSizes((prev) => {
+          const updatedSizes = prev.includes(size)
+            ? prev.filter((item) => item !== size)
+            : [...prev, size];
+          return allSizes.filter((item) => updatedSizes.includes(item));
+        });
+    };
+
+    const updateNumber = (value, index) => {
+        const newNumber = [...number];
+        newNumber[index] = value;
+        setNumber(newNumber);
+    };
 
     return (
         <form onSubmit={onSubmitHandler} className='flex flex-col w-full items-start gap-3 dark:text-white'>
@@ -120,36 +161,56 @@ const Add = ({ token }) => {
                         <option value="Брюки та джинси">Брюки та джинси</option>
                     </select>
                 </div>
+            </div>
 
+            <div className='flex gap-2 mt-2'>
+                <input onChange={() => setSale(prev => !prev)} checked={sale} type="checkbox" id="sale" />
+                <label className='cursor-pointer' htmlFor="sale">Додати знижку</label>
+            </div>
+
+            <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8 dark:text-black'>
                 <div>
                     <p className='mb-2 dark:text-white'>Ціна</p>
-                    <input onChange={(e) => setPrice(e.target.value)} value={price} className='w-full px-3 py-1.5 sm:w-[120px]' type="number" placeholder='100' />
+                    <input onChange={(e) => setPrice(e.target.value)} value={price} className='w-full px-3 py-1.5 sm:w-[120px]' type="number" placeholder='100' required/>
+                </div>
+
+                <div>
+                    <p className='mb-2 dark:text-white'>Ціна зі знижкою</p>
+                    <input onChange={(e) => setSalePrice(e.target.value)} value={salePrice} disabled={!sale} className='w-full px-3 py-1.5 sm:w-[120px]' type="number" placeholder='100' />
                 </div>
             </div>
 
             <div>
                 <p className='mb-2'>Розміри</p>
                 <div className='flex gap-3 dark:text-black'>
-                    <div onClick={() => setSizes(prev => prev.includes("S") ? prev.filter(item => item !== "S") : [...prev, "S"])}>
+                    <div onClick={() => toggleSize("S")} className="w-16 text-center">
                         <p className={`${sizes.includes("S") ? "bg-red-500" : "bg-slate-200"} px-3 py-1 cursor-pointer rounded`}>S</p>
                     </div>
 
-                    <div onClick={() => setSizes(prev => prev.includes("M") ? prev.filter(item => item !== "M") : [...prev, "M"])}>
+                    <div onClick={() => toggleSize("M")} className="w-16 text-center">
                         <p className={`${sizes.includes("M") ? "bg-red-500" : "bg-slate-200"} px-3 py-1 cursor-pointer rounded`}>M</p>
                     </div>
 
-                    <div onClick={() => setSizes(prev => prev.includes("L") ? prev.filter(item => item !== "L") : [...prev, "L"])}>
+                    <div onClick={() => toggleSize("L")} className="w-16 text-center">
                         <p className={`${sizes.includes("L") ? "bg-red-500" : "bg-slate-200"} px-3 py-1 cursor-pointer rounded`}>L</p>
                     </div>
 
-                    <div onClick={() => setSizes(prev => prev.includes("XL") ? prev.filter(item => item !== "XL") : [...prev, "XL"])}>
+                    <div onClick={() => toggleSize("XL")} className="w-16 text-center">
                         <p className={`${sizes.includes("XL") ? "bg-red-500" : "bg-slate-200"} px-3 py-1 cursor-pointer rounded`}>XL</p>
                     </div>
 
-                    <div onClick={() => setSizes(prev => prev.includes("XXL") ? prev.filter(item => item !== "XXL") : [...prev, "XXL"])}>
+                    <div onClick={() => toggleSize("XXL")} className="w-16 text-center">
                         <p className={`${sizes.includes("XXL") ? "bg-red-500" : "bg-slate-200"} px-3 py-1 cursor-pointer rounded`}>XXL</p>
                     </div>
                 </div>
+            </div>
+
+            <div className='flex gap-3 dark:text-black'>
+                <input onChange={(e) => updateNumber(Number(e.target.value), 0)} disabled={!sizes.includes(allSizes[0])} className='max-w-16 px-3 py-1.5 sm:w-[120px]' type="number" placeholder='10' />
+                <input onChange={(e) => updateNumber(Number(e.target.value), 1)} disabled={!sizes.includes(allSizes[1])} className='max-w-16 px-3 py-1.5 sm:w-[120px]' type="number" placeholder='10' />
+                <input onChange={(e) => updateNumber(Number(e.target.value), 2)} disabled={!sizes.includes(allSizes[2])} className='max-w-16 px-3 py-1.5 sm:w-[120px]' type="number" placeholder='10' />
+                <input onChange={(e) => updateNumber(Number(e.target.value), 3)} disabled={!sizes.includes(allSizes[3])} className='max-w-16 px-3 py-1.5 sm:w-[120px]' type="number" placeholder='10' />
+                <input onChange={(e) => updateNumber(Number(e.target.value), 4)} disabled={!sizes.includes(allSizes[4])} className='max-w-16 px-3 py-1.5 sm:w-[120px]' type="number" placeholder='10' />
             </div>
 
             <div className='flex gap-2 mt-2'>
