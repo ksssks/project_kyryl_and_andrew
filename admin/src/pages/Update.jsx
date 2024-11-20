@@ -4,7 +4,7 @@ import axios from 'axios'
 import {backendUrl} from '../App'
 import {toast} from 'react-toastify'
 
-const Add = ({token}) => {
+const Update = ({token}) => {
 
     const [image1, setImage1] = useState(false)
     const [image2, setImage2] = useState(false)
@@ -218,20 +218,15 @@ const Add = ({token}) => {
 
             <div className='flex gap-3 dark:text-black'>
                 <input onChange={(e) => updateNumber(Number(e.target.value), 0)} disabled={!sizes.includes(allSizes[0])}
-                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number"
-                       placeholder='10'/>
+                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
                 <input onChange={(e) => updateNumber(Number(e.target.value), 1)} disabled={!sizes.includes(allSizes[1])}
-                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px] ' type="number"
-                       placeholder='10'/>
+                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px] ' type="number" placeholder='10'/>
                 <input onChange={(e) => updateNumber(Number(e.target.value), 2)} disabled={!sizes.includes(allSizes[2])}
-                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number"
-                       placeholder='10'/>
+                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
                 <input onChange={(e) => updateNumber(Number(e.target.value), 3)} disabled={!sizes.includes(allSizes[3])}
-                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number"
-                       placeholder='10'/>
+                       className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
                 <input onChange={(e) => updateNumber(Number(e.target.value), 4)} disabled={!sizes.includes(allSizes[4])}
-                       className='max-w-16 px-3 w-12 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number"
-                       placeholder='10'/>
+                       className='max-w-16 px-3 w-12 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
             </div>
 
             <div className='flex gap-2 mt-2'>
@@ -239,12 +234,16 @@ const Add = ({token}) => {
                        id="bestseller"/>
                 <label className='cursor-pointer' htmlFor="bestseller">Додати до бестселерів</label>
             </div>
-
-            <button type="submit"
-                    className='w-48 py-2 mt-4 bg-black text-white rounded dark:text-black dark:bg-white'>Додати
-            </button>
+            <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8 dark:text-black'>
+                <button type="submit"
+                        className='w-48 py-2 mt-4 bg-black text-white rounded dark:text-black dark:bg-white'>Додати
+                </button>
+                <button type="submit" className='w-48 py-2 mt-4 bg-red-500 text-white rounded dark:text-black'>Скасувати
+                    зміни
+                </button>
+            </div>
         </form>
     )
 }
 
-export default Add
+export default Update
