@@ -39,14 +39,10 @@ const Add = ({token}) => {
 
             if (salePrice !== "") {
                 const saleModify = Math.ceil(Math.round((1 - Number(salePrice) / Number(price)) * 10000) / 100);
-                console.log((1 - Number(salePrice) / Number(price)) * 100);
-                console.log(saleModify);
-
                 formData.append("saleModify", `-${saleModify}%`);
             } else {
                 formData.append("saleModify", "");
             }
-
 
             formData.append("category", category)
             formData.append("subCategory", subCategory)
