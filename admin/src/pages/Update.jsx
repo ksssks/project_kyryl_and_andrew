@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { useParams, useNavigate  } from 'react-router-dom';
 import {assets} from '../assets/assets'
 import axios from 'axios'
 import {backendUrl} from '../App'
 import {toast} from 'react-toastify'
 
 const Update = ({token}) => {
+    const navigate = useNavigate();
+    const { id: productId } = useParams();
 
     const [image1, setImage1] = useState(false)
     const [image2, setImage2] = useState(false)
@@ -24,6 +27,50 @@ const Update = ({token}) => {
     const [number, setNumber] = useState([0, 0, 0, 0, 0]);
     const allSizes = ["S", "M", "L", "XL", "XXL"];
 
+    const fetchProductData = async () => {
+        try {
+            
+            const response = await axios.post(backendUrl + '/api/product/single', {productID: productId });
+
+            if (response.data.success) {
+                const product = response.data.product;
+                
+                setName(product.name);
+                setDescription(product.description);
+                setPrice(product.price);
+                setSale(product.sale);
+                setSalePrice(product.salePrice);
+                setCategory(product.category);
+                setSubCategory(product.subCategory);
+                setBestseller(product.bestseller);
+
+                const sizeData = allSizes.map(size => product.sizes.includes(size) ? size : null).filter(Boolean);
+                setSizes(sizeData);
+
+                const numberData = allSizes.map(size => {
+                    const index = product.sizes.indexOf(size);
+                    return index !== -1 ? product.number[index] : 0;
+                });
+                setNumber(numberData);
+
+                const images = product.image
+                const files = await Promise.all(images.map((url) => convertUrlToFile(url)));
+
+                setImage1(files[0] || false);
+                setImage2(files[1] || false);
+                setImage3(files[2] || false);
+                setImage4(files[3] || false);
+                setImage5(files[4] || false);
+              } else {
+                toast.error(response.data.message);
+              }
+
+        } catch (error) {
+            console.log(error);
+            toast.error('Не вдалося завантажити дані продукту');
+        }
+    };
+
     const onSubmitHandler = async (e) => {
         e.preventDefault();
 
@@ -31,6 +78,7 @@ const Update = ({token}) => {
 
             const formData = new FormData()
 
+            formData.append("id", productId);
             formData.append("name", name)
             formData.append("description", description)
             formData.append("price", price)
@@ -39,9 +87,6 @@ const Update = ({token}) => {
 
             if (salePrice !== "") {
                 const saleModify = Math.ceil(Math.round((1 - Number(salePrice) / Number(price)) * 10000) / 100);
-                console.log((1 - Number(salePrice) / Number(price)) * 100);
-                console.log(saleModify);
-
                 formData.append("saleModify", `-${saleModify}%`);
             } else {
                 formData.append("saleModify", "");
@@ -64,21 +109,11 @@ const Update = ({token}) => {
             image4 && formData.append("image4", image4)
             image5 && formData.append("image5", image5)
 
-            const response = await axios.post(backendUrl + "/api/product/add", formData, {headers: {token}})
+            const response = await axios.post(backendUrl + "/api/product/update", formData, {headers: {token}});
 
             if (response.data.success) {
                 toast.success(response.data.message)
-                setName('')
-                setDescription('')
-                setImage1(false)
-                setImage2(false)
-                setImage3(false)
-                setImage4(false)
-                setImage5(false)
-                setPrice('')
-                setSale(false)
-                setSalePrice('')
-                setBestseller(false)
+                navigate('/list');
             } else {
                 toast.error(response.data.message)
             }
@@ -88,6 +123,22 @@ const Update = ({token}) => {
             toast.error(error.message)
         }
     }
+
+    const handleCancelChanges = () => {
+        navigate('/list');
+    };
+    
+    const convertUrlToFile = async (url) => {
+        try {
+            const response = await fetch(url);
+            const blob = await response.blob();
+            const fileName = url.split('/').pop(); 
+            return new File([blob], fileName, { type: blob.type });
+        } catch (error) {
+            console.log(error);
+            return null;
+        }
+    };
 
     const toggleSize = (size) => {
         setSizes((prev) => {
@@ -103,6 +154,10 @@ const Update = ({token}) => {
         newNumber[index] = value;
         setNumber(newNumber);
     };
+
+    useEffect(() => {
+        fetchProductData();
+    }, [productId, token]);
 
     return (
         <form onSubmit={onSubmitHandler} className='flex flex-col w-full items-start gap-3 dark:text-white'>
@@ -155,7 +210,7 @@ const Update = ({token}) => {
             <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8 dark:text-black'>
                 <div>
                     <p className='mb-2 dark:text-white'>Категорія</p>
-                    <select onChange={(e) => setCategory(e.target.value)} className='w-ful px-3 py-2'>
+                    <select value={category} onChange={(e) => setCategory(e.target.value)} className='w-ful px-3 py-2'>
                         <option value="Чоловічий одяг">Чоловічий одяг</option>
                         <option value="Жіночий одяг">Жіночий одяг</option>
                         <option value="Дитячий одяг">Дитячий одяг</option>
@@ -164,7 +219,7 @@ const Update = ({token}) => {
 
                 <div>
                     <p className='mb-2 dark:text-white'>Підкатегорія</p>
-                    <select onChange={(e) => setSubCategory(e.target.value)} className='w-ful px-3 py-2'>
+                    <select value={subCategory} onChange={(e) => setSubCategory(e.target.value)} className='w-ful px-3 py-2'>
                         <option value="Светри та худі">Светри та худі</option>
                         <option value="Футболки та реглани">Футболки та реглани</option>
                         <option value="Брюки та джинси">Брюки та джинси</option>
@@ -217,15 +272,15 @@ const Update = ({token}) => {
             </div>
 
             <div className='flex gap-3 dark:text-black'>
-                <input onChange={(e) => updateNumber(Number(e.target.value), 0)} disabled={!sizes.includes(allSizes[0])}
+                <input value={number[0]} onChange={(e) => updateNumber(Number(e.target.value), 0)} disabled={!sizes.includes(allSizes[0])}
                        className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
-                <input onChange={(e) => updateNumber(Number(e.target.value), 1)} disabled={!sizes.includes(allSizes[1])}
+                <input value={number[1]} onChange={(e) => updateNumber(Number(e.target.value), 1)} disabled={!sizes.includes(allSizes[1])}
                        className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px] ' type="number" placeholder='10'/>
-                <input onChange={(e) => updateNumber(Number(e.target.value), 2)} disabled={!sizes.includes(allSizes[2])}
+                <input value={number[2]} onChange={(e) => updateNumber(Number(e.target.value), 2)} disabled={!sizes.includes(allSizes[2])}
                        className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
-                <input onChange={(e) => updateNumber(Number(e.target.value), 3)} disabled={!sizes.includes(allSizes[3])}
+                <input value={number[3]} onChange={(e) => updateNumber(Number(e.target.value), 3)} disabled={!sizes.includes(allSizes[3])}
                        className='max-w-16 px-3 w-10 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
-                <input onChange={(e) => updateNumber(Number(e.target.value), 4)} disabled={!sizes.includes(allSizes[4])}
+                <input value={number[4]} onChange={(e) => updateNumber(Number(e.target.value), 4)} disabled={!sizes.includes(allSizes[4])}
                        className='max-w-16 px-3 w-12 text-xs sm:text-lg py-1.5 sm:w-[120px]' type="number" placeholder='10'/>
             </div>
 
@@ -236,9 +291,9 @@ const Update = ({token}) => {
             </div>
             <div className='flex flex-col sm:flex-row gap-2 w-full sm:gap-8 dark:text-black'>
                 <button type="submit"
-                        className='w-48 py-2 mt-4 bg-black text-white rounded dark:text-black dark:bg-white'>Додати
+                        className='w-48 py-2 mt-4 bg-black text-white rounded dark:text-black dark:bg-white'>Застосувати
                 </button>
-                <button type="submit" className='w-48 py-2 mt-4 bg-red-500 text-white rounded dark:text-black'>Скасувати
+                <button type="button" onClick={handleCancelChanges} className='w-48 py-2 mt-4 bg-red-500 text-white rounded dark:text-black'>Скасувати
                     зміни
                 </button>
             </div>
