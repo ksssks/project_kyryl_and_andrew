@@ -12,6 +12,7 @@ const Collection = () => {
     const [subCategory, setSubCategory] = useState([]);
     const [sortType, setSortType] = useState('relevant');
     const [currentPage, setCurrentPage] = useState(1);
+    const [hasDiscount, setHasDiscount] = useState(false); // Новий стан для фільтра знижок
 
     const productsPerPage = 24;
 
@@ -46,6 +47,10 @@ const Collection = () => {
             productsCopy = productsCopy.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
         }
 
+        if (hasDiscount) {
+            productsCopy = productsCopy.filter(item => item.salePrice && item.salePrice < item.price);
+        }
+
         setFilterProducts(productsCopy);
         setCurrentPage(1);
     };
@@ -68,7 +73,7 @@ const Collection = () => {
 
     useEffect(() => {
         applyFilter();
-    }, [category, subCategory, search, showSearch, products]);
+    }, [category, subCategory, search, showSearch, hasDiscount, products]);
 
     useEffect(() => {
         sortProduct();
@@ -94,13 +99,13 @@ const Collection = () => {
 
     return (
         <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
-            {/*Filters*/}
+            {/* Filters */}
             <div className='min-w-60'>
                 <p onClick={() => setShowFilter(!showFilter)}
-                    className='my-2 text-xl flex items-center cursor-pointer gap-2 dark:text-white'>Фільтри
+                   className='my-2 text-xl flex items-center cursor-pointer gap-2 dark:text-white'>Фільтри
                     <img className={`h-3 sm:hidden ${showFilter ? 'rotate-90' : ''}`} src={assets.dropdown} alt='' />
                 </p>
-                {/*Category*/}
+                {/* Category Filter */}
                 <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
                     <p className='mb-3 text-sm font-medium dark:text-white'>Категорії</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
@@ -118,7 +123,7 @@ const Collection = () => {
                         </p>
                     </div>
                 </div>
-                {/*Subcategory filter*/}
+                {/* Subcategory Filter */}
                 <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
                     <p className='mb-3 text-sm font-medium dark:text-white'>Тип товару</p>
                     <div className='flex flex-col gap-2 text-sm font-light text-gray-700 dark:text-white'>
@@ -133,22 +138,30 @@ const Collection = () => {
                         </p>
                     </div>
                 </div>
+                {/* Discount Filter */}
+                <div className={`border border-gray-300 pl-5 py-3 mt-6 ${showFilter ? '' : 'hidden'} sm:block`}>
+                    <p className='mb-3 text-sm font-medium dark:text-white'>Знижка</p>
+                    <div className='flex items-center gap-2 text-sm font-light text-gray-700 dark:text-white'>
+                        <input className='w-3' type="checkbox" onChange={() => setHasDiscount(!hasDiscount)} />
+                        <span>Товари зі знижкою</span>
+                    </div>
+                </div>
             </div>
             {/* Right side */}
             <div className='flex-1'>
                 <div className='flex justify-between text-base sm:text-2xl mb-4'>
                     <Title text1={'Усі'} text2={'колекції'} />
-                    {/*Product Sort*/}
-                    <select onChange={(e) => setSortType(e.target.value)} className='border-2 border-gray-300 text-sm px-2'>
+                    {/* Product Sort */}
+                    <select onChange={(e) => setSortType(e.target.value)} className='border-2 border-gray-300 text-xs px-2'>
                         <option value='relevant'>Сортувати за релевантністю</option>
                         <option value='low-high'>Ціна (за зростанням)</option>
                         <option value='high-low'>Ціна (за спаданням)</option>
                     </select>
                 </div>
-                {/*Map products*/}
+                {/* Map Products */}
                 <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 gap-y-6'>
                     {currentProducts.map((item, index) => (
-                        <ProductItem key={index} name={item.name} id={item._id} price={item.price} image={item.image} />
+                        <ProductItem key={index} name={item.name} id={item._id} price={item.price} salePrice={item.salePrice} image={item.image} />
                     ))}
                 </div>
                 {/* Pagination */}
