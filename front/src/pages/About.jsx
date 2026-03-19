@@ -8,7 +8,7 @@ const About = () => {
         <div>
             <div className='text-3xl pt-8 border-t'><Title text1={'Про'} text2={'нас'}/></div>
             <div className='my-10 flex flex-col gap-16'>
-                <img className='w-full h-[300px] md:h-[500px] object-cover' src={assets.shop} alt='About image'/>
+                <img className='w-full object-cover' src={assets.shop} alt='About image'/>
                 <div className='flex flex-col justify-center gap-6 text-gray-600 dark:text-white'>
                     <p>Ласкаво просимо до Trendify — інтернет-магазину дизайнерського одягу, заснованого в 2005 році. Ми
                         поєднуємо стиль, якість і інновації, пропонуючи вам ексклюзивні колекції від найкращих сучасних
