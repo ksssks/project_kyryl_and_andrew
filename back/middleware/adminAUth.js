@@ -12,7 +12,9 @@ const adminAuth = async (req, res, next) => {
         }
         next()
     } catch (error) {
-        console.log(error);
+        if (process.env.NODE_ENV !== "test") {
+            console.log(error)
+        }
         res.json({ success: false, message: error.message })
     }
 }

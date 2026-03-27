@@ -30,7 +30,9 @@ const loginUser = async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error);
+        if (process.env.NODE_ENV !== "test") {
+            console.log(error)
+        }
         res.json({ success: false, message: error.message })
     }
 }
@@ -70,7 +72,9 @@ const registerUser = async (req, res) => {
         res.json({ success: true, token })
 
     } catch (error) {
-        console.log(error);
+        if (process.env.NODE_ENV !== "test") {
+            console.log(error)
+        }
         res.json({ success: false, message: error.message })
     }
 }
@@ -88,7 +92,9 @@ const adminLogin = async (req, res) => {
         }
 
     } catch (error) {
-        console.log(error);
+        if (process.env.NODE_ENV !== "test") {
+            console.log(error)
+        }
         res.json({ success: false, message: error.message })
     }
 }
